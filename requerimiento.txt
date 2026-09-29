@@ -131,4 +131,7 @@ En la tabla del GUI, la fila de "Pizza" aparece con color de fondo #FFA500 (nara
 A nivel de base de datos:
 {"categorías": {"Comida": "#FFA500"}}
 
+/*--------------------------------------------------------------------------------------------------*/
+28-09-2026 Se entrega un avance a la plataforma antes de iniciar con la construccion del front end.
+
 
