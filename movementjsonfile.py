@@ -31,6 +31,7 @@ def movement_read_json_file(path_json_file):
         print(f'Error al leer archivo JSON {e}')
 
 
+# Funcion para salvar movimientos en archivo Json
 
 def movement_save_json_file(movement_list, path_json_file):
     try:
