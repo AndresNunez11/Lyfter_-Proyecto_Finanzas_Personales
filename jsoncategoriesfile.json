@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Salario",
+        "color": "#00FF00"
+    },
+    {
+        "name": "Deportes",
+        "color": "#800080"
+    },
+    {
+        "name": "Salida Semanal",
+        "color": "#FFA500"
+    },
+    {
+        "name": "Medicinas",
+        "color": "#808080"
+    },
+    {
+        "name": "Servicios Publicos",
+        "color": "#A52A2A"
+    }
+]

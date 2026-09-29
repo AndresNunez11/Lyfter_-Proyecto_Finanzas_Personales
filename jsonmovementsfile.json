@@ -1,0 +1,9 @@
+[
+    {
+        "date": "2026-09-21",
+        "description": "Pago de quincena",
+        "amount": "1500000",
+        "category": "Categoría: Salario | Color: #00FF00",
+        "type": "Ingreso"
+    }
+]

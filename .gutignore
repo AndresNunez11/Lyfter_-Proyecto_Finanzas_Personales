@@ -1,1 +1,21 @@
 __pycache__/ 
+.pytest_cache__/ 
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Pytest
+.pytest_cache/
+
+# Entorno virtual
+venv/
+.venv/
+
+# IDEs
+.vscode/
+.idea/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
