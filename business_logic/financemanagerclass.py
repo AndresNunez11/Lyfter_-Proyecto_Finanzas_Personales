@@ -1,8 +1,8 @@
 from datetime import datetime
-from businesslogic.categoryclass import Category 
-from businesslogic.movementclass import Movement
-from businesslogic.categoryjsonfile import category_read_json_file, category_save_json_file
-from businesslogic.movementjsonfile import movement_read_json_file, movement_save_json_file
+from business_logic.categoryclass import Category 
+from business_logic.movementclass import Movement
+from business_logic.categoryjsonfile import category_read_json_file, category_save_json_file
+from business_logic.movementjsonfile import movement_read_json_file, movement_save_json_file
 
 
 class CategoryExistsError(Exception):

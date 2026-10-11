@@ -1,7 +1,7 @@
 import json
 import os
-from businesslogic.categoryclass import Category
-from businesslogic.movementclass import Movement
+from business_logic.categoryclass import Category
+from business_logic.movementclass import Movement
 
 
 HEATHERS_FILE = ["Fecha_Movimiento", "Descripcion", "Monto", "Categoria", "Tipo"]

@@ -1,6 +1,6 @@
-from businesslogic.financemanagerclass import finance_manager
-from businesslogic.categoryclass import Category
-from businesslogic.movementclass import Movement
+from business_logic.financemanagerclass import finance_manager
+from business_logic.categoryclass import Category
+from business_logic.movementclass import Movement
 
 #Opciones del menu, esta en el codigo pero podria trarse de un json o BD
 #Utilizar la variable global en la mayuscula cuando es inmutable -- 
