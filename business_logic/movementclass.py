@@ -1,5 +1,5 @@
-from businesslogic.movementsvalidationclass import movement_validation
-from businesslogic.categoryclass import Category
+from business_logic.movementsvalidationclass import movement_validation
+from business_logic.categoryclass import Category
 
 class Movement:
 

@@ -1,4 +1,4 @@
-from businesslogic.categoryvalidationclass import category_validation
+from business_logic.categoryvalidationclass import category_validation
 
 class Category:
 

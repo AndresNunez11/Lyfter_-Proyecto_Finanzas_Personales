@@ -1,6 +1,6 @@
 import json
 import os
-from businesslogic.categoryclass import Category
+from business_logic.categoryclass import Category
 
 HEATHERS_FILE = ["Categoria", "Color"]
 
