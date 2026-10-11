@@ -13,11 +13,18 @@ def movement_read_json_file(path_json_file):
         with open(path_json_file, "r", encoding="utf-8" ) as file:
             data = json.load(file)
             for data_movement in data:
+                category_data = data_movement["category"]
+
+                category = Category(
+                        category_data["name"],
+                        category_data["color"]
+                )
+
                 movement_list.append(Movement(
-                                data_movement["date"],
+                                data_movement["movement_date"],
                                 data_movement["description"],
                                 data_movement["amount"],
-                                data_movement["category"],
+                                category,
                                 data_movement["type"]
                             ))
             return movement_list
