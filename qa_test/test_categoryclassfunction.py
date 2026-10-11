@@ -1,6 +1,6 @@
-from categoryclass import Category
-from financemanagerclass import finance_manager, CategoryExistsError
-from categoryvalidationclass import FormatTypeError, NameTypeError, EmptyTypeError
+from business_logic.categoryclass import Category
+from business_logic.financemanagerclass import finance_manager, CategoryExistsError
+from business_logic.categoryvalidationclass import FormatTypeError, NameTypeError, EmptyTypeError
 import pytest 
 
 def test_add_new_category_correct_category(tmp_path):

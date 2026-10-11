@@ -1,7 +1,7 @@
-from movementclass import Movement
-from movementsvalidationclass import movement_validation, EmptyTypeError
-from financemanagerclass import finance_manager
-from categoryclass import Category
+from business_logic.movementclass import Movement
+from business_logic.movementsvalidationclass import movement_validation, EmptyTypeError
+from business_logic.financemanagerclass import finance_manager
+from business_logic.categoryclass import Category
 from datetime import date
 import pytest
 

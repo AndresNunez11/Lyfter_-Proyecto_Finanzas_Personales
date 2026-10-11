@@ -1,0 +1,42 @@
+[
+    {
+        "movement_date": "2026-07-12",
+        "description": "Pago de quincena",
+        "amount": "750000",
+        "category": {
+            "name": "Salario",
+            "color": "#00FF00"
+        },
+        "type": "Ingreso"
+    },
+    {
+        "movement_date": "2026-07-23",
+        "description": "Pago de quincena",
+        "amount": "750000",
+        "category": {
+            "name": "Salario",
+            "color": "#00FF00"
+        },
+        "type": "Ingreso"
+    },
+    {
+        "movement_date": "2026-07-13",
+        "description": "Compra de supermercado",
+        "amount": "46637",
+        "category": {
+            "name": "Comestible",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-07-14",
+        "description": "Combustible",
+        "amount": "20274",
+        "category": {
+            "name": "Transporte",
+            "color": "#800080"
+        },
+        "type": "Gasto"
+    }
+]
