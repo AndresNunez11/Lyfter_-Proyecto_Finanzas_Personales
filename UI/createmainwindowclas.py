@@ -1,42 +1,8 @@
 import FreeSimpleGUI as sg
+from UI.financialindicatorsclass import create_financial_indicators
+from UI.footerclass import create_footer
 
-
-
-#Uso de tkinter.Canvas para conseguir un panel con esquinas redondeadas
-# def draw_rounded_rectangle(canvas, x1, y1, x2, y2, radius=25,
-#     fill="#475569", outline=""):
-#     points = [
-#         x1 + radius, y1,
-#         x2 - radius, y1,
-#         x2, y1,
-#         x2, y1 + radius,
-#         x2, y2 - radius,
-#         x2, y2,
-#         x2 - radius, y2,
-#         x1 + radius, y2,
-#         x1, y2,
-#         x1, y2 - radius,
-#         x1, y1 + radius,
-#         x1, y1
-#     ]
-#     canvas.create_polygon(
-#         points,
-#         smooth=True,
-#         splinesteps=36,
-#         fill=fill,
-#         outline=outline
-#     )
-
-#     canvas.create_text(
-#     470, 35,
-#     text="Bienvenido a IQF - Smart Finance",
-#     font=("Arial", 16, "bold"),
-#     fill="#F8FAFC",
-#     anchor="center"
-#     )
-
-
-#Funcion para la pnatalla principal
+#Funcion para la pantalla principal
 def create_main_window(theme):
 
     sg.theme(theme)
@@ -46,6 +12,9 @@ def create_main_window(theme):
         ["Reportes", ["Consultar reportes", "Exportar CSV"]],
         ["Configuración", ["Tema claro", "Tema oscuro"]]
     ]
+
+    indicators = create_financial_indicators()
+    footer = create_footer()
 
     layout = [
         [sg.Menu(menu_definition,
@@ -65,17 +34,6 @@ def create_main_window(theme):
                     [sg.Frame(
                         "Bienvenido a IQ - Smart Finance",
                         [
-                        # [
-                        #     sg.Text(
-                        #         "Selecciona el módulo que deseas utilizar",
-                        #         font=("Arial", 12),
-                        #         justification="left",
-                        #         text_color="#A7F3D0",
-                        #         background_color="#475569",
-                        #         expand_x=True,
-                        #         relief="flat"
-                        #     )
-                        # ],
                         [sg.Text("", background_color="#475569", size=(1, 1))], #size=(1, 2) agrega una fila vacía de aproximadamente dos líneas de alto
                         [   
                         sg.Push(background_color="#475569"),
@@ -95,6 +53,13 @@ def create_main_window(theme):
                         pad=((20, 20), (40, 40))
                         )
                     ],
+                    [sg.HorizontalSeparator()],
+                    [sg.Column
+                        ([indicators],
+                        expand_x=True,
+                        expand_y=True,
+                        pad=(0,0))
+                    ]
                 ],
             scrollable=True,
             vertical_scroll_only=True,
@@ -106,40 +71,14 @@ def create_main_window(theme):
             # background_color="#1F2937"
             )   
         ],
-        # [sg.Canvas(
-        #     size=(1000, 250),
-        #     key="-PANEL-",
-        #     expand_x=True,
-        #     expand_y=True,
-        #     pad=(20, 20)
-        #     )
-        # ],
+        [footer]
     ] 
-
     window = sg.Window("IQF - Smart Finance", 
                     layout, 
-                    size=(1300, 750), 
+                    size=(1300, 650), 
                     resizable=True, 
                     finalize=True,
                     margins=(0, 0),
                     # background_color="#1F4E78",
                     font=("Arial", 20, "bold"))
-
-    # canvas = window["-PANEL-"].TKCanvas
-
-    # draw_rounded_rectangle(
-    #     canvas,
-    #     10, 10, 930, 220,
-    #     radius=25,
-    #     fill="#475569"
-    # )
-
     return window  
-    
-    # return sg.Window("IQF - Smart Finance", 
-    #                 layout, 
-    #                 size=(1000, 500), 
-    #                 resizable=False, 
-    #                 finalize=True,
-    #                 # background_color="#1F4E78",
-    #                 font=("Arial", 20, "bold"))
