@@ -1,7 +1,7 @@
-from categoryclass import Category 
-from movementclass import Movement
-from categoryjsonfile import category_read_json_file, category_save_json_file
-from movementjsonfile import movement_read_json_file, movement_save_json_file
+from business_logic.categoryclass import Category 
+from business_logic.movementclass import Movement
+from business_logic.categoryjsonfile import category_read_json_file, category_save_json_file
+from business_logic.movementjsonfile import movement_read_json_file, movement_save_json_file
 
 
 class CategoryExistsError(Exception):

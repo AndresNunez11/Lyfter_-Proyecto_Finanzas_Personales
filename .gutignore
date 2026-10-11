@@ -19,3 +19,11 @@ venv/
 # Sistema operativo
 .DS_Store
 Thumbs.db
+
+# Archivos compilados de Python
+__pycache__/
+*.py[cod]
+
+# Entornos virtuales
+.venv/
+venv/
