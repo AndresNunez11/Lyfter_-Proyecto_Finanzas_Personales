@@ -39,7 +39,7 @@ def test_add_empty_description_movement():
 
 def test_add_wrong_format_date_movement():
     #Arrange
-    m_date =  '2026-09-28'
+    m_date =  '20-09-28'
     description = 'Pago de Salario'
     amount = 1500000.0
     category = Category('Salario','#000000')
@@ -50,7 +50,7 @@ def test_add_wrong_format_date_movement():
 
 def test_add_wrong_date_after_today_movement():
     #Arrange
-    m_date =  '2026-09-30'
+    m_date =  '2028-09-30'
     description = 'Pago de Salario'
     amount = 1500000.0
     category = Category('Salario','#000000')

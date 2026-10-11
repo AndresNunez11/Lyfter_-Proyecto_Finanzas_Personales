@@ -3,6 +3,8 @@ from business_logic.financemanagerclass import finance_manager, CategoryExistsEr
 from business_logic.categoryvalidationclass import FormatTypeError, NameTypeError, EmptyTypeError
 import pytest 
 
+#python -m pytest -v qa_test/ comando para ejecutar las pruebas desde la carpeta.
+
 def test_add_new_category_correct_category(tmp_path):
     #Arrange
     action = finance_manager()
