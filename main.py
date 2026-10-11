@@ -1,9 +1,9 @@
-from menu import menu
+from businesslogic.menu import menu
 
 # Variables Globales
 #Utilizar la variable global en la mayuscula cuando es inmutable -- 
-PATH_JSON_CAT = 'jsoncategoriesfile.json'
-PATH_JSON_MOV = 'jsonmovementsfile.json'
+PATH_JSON_CAT = 'source/jsoncategoriesfile.json'
+PATH_JSON_MOV = 'source/jsonmovementsfile.json'
 PATH_CSV_REPORT = 'Lyfter_Gestor_Finanzas_Personales/REPORT.csv'
 
 #Funcion principal del sistema 

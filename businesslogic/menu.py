@@ -1,11 +1,13 @@
-from financemanagerclass import finance_manager
-from categoryclass import Category
-from movementclass import Movement
+from businesslogic.financemanagerclass import finance_manager
+from businesslogic.categoryclass import Category
+from businesslogic.movementclass import Movement
 
 #Opciones del menu, esta en el codigo pero podria trarse de un json o BD
 #Utilizar la variable global en la mayuscula cuando es inmutable -- 
 MENU_LIST= ["0- Salir",
-"1- Agregar Categoria", "2-Agregar Movimiento"]
+"1- Agregar Categoria", "2- Agregar Movimiento", "3- Ver Categorias", 
+"4- Ver movimientos", "5- Balance","6- Total Ingresos",
+"7- Total de Gastos","8- Movimientos en Rango de Fechas"]
 
 # Funcion principal para desplegar el menu
 def menu(path_json_cat, path_json_mov, path_csv_report):
@@ -45,22 +47,29 @@ def menu(path_json_cat, path_json_mov, path_csv_report):
                         print(new_movement)
                         actions.add_movement(new_movement,path_json_mov)                        
                     case 3:
-                        print('Top 3 de estudiantes con promedio de notas mas alto: \n')
+                        print(f'{MENU_LIST[3]}:\n')
+                        print(actions.list_category(path_json_cat))
                         
                     case 4: 
-                        print('El promedio total de todos los estudiantes es :\n')
+                        print(f'{MENU_LIST[4]}:\n')
+                        print(actions.list_movement(path_json_mov))
                         
                     case 5:
-                        print('Generar archivo y exportar a formato CSV :\n')
-                        
+                        print(f'{MENU_LIST[5]}:\n')
+                        print(actions.Global_balance(path_json_mov))
                     case 6:
-                        print('Validar archivo e importar de formato CSV. Los datos del archivo son: \n')
-                        
+                        print(f'{MENU_LIST[6]}:\n')
+                        print(actions.incoming_balance(path_json_mov))
                     case 7: 
-                        print('Proceso para eliminar un estudiante de la lista: \n')
+                        print(f'{MENU_LIST[7]}:\n')
+                        print(actions.expense_balance(path_json_mov))
                         
                     case 8:
-                        print("Se muestra la informacion de los estudiantes reprobados")
+                        print(f'{MENU_LIST[8]}:\n')
+                        movements = actions.filter_movements_by_date_range("2026-07-15","2026-07-31",path_json_mov)
+                        for movement in movements:
+                            print(movement)
+                        
                         
             except IndexError as error:
                 print(f'La opción elegida no esta dentro de las disponibles. Error: {error}')
