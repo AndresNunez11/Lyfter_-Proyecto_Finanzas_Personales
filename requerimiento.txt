@@ -1,14 +1,14 @@
 ***************Objetivo
-Desarrollar una aplicación con interfaz gráfica usando la biblioteca FreeSimpleGUI, 
-que permita gestionar finanzas personales de forma sencilla. Este proyecto tiene 
-como propósito poner en práctica todos los conceptos aprendidos durante el Módulo 1,
+Desarrollar una aplicación con interfaz gráfica usando la biblioteca FreeSimpleGUI, ✅
+que permita gestionar finanzas personales de forma sencilla. Este proyecto tiene ✅
+como propósito poner en práctica todos los conceptos aprendidos durante el Módulo 1,✅
 especialmente:
-Modularización
-Manejo de archivos
-Validaciones
-Funciones
-Programación orientada a objetos (POO)
-Separación de lógica y presentación
+Modularización✅
+Manejo de archivos✅
+Validaciones✅
+Funciones✅
+Programación orientada a objetos (POO)✅
+Separación de lógica y presentación✅
 
 ***************Requisitos técnicos
 La aplicación debe:
@@ -24,43 +24,44 @@ Al presionarlo, debe abrir una nueva ventana que permita ingresar un título, mo
 Mostrar un mensaje de error si se intenta agregar un ingreso/gasto sin categorías disponibles.
 
 ***************Persistencia de datos
-Al cerrar o hacer un cambio, el programa debe guardar automáticamente los datos en archivos.
-Al abrir el programa, debe cargar los datos previamente guardados (si existen).
+Al cerrar o hacer un cambio, el programa debe guardar automáticamente los datos en archivos.✅
+Al abrir el programa, debe cargar los datos previamente guardados (si existen).✅
 
 ***************Reglas de desarrollo
-Use clases para representar las entidades principales del sistema (Movimiento, Categoria, GestorFinanzas, etc.).
-Separe la lógica del programa en funciones pequeñas y reutilizables.
-Organice su código en módulos (interfaces.py, logica.py, persistencia.py, etc.).
-Use identificadores claros que indiquen el propósito de cada variable, función o clase.
+Use clases para representar las entidades principales del sistema (Movimiento, Categoria, GestorFinanzas, etc.).✅
+Separe la lógica del programa en funciones pequeñas y reutilizables.✅
+Organice su código en módulos (interfaces.py, logica.py, persistencia.py, etc.).✅
+Use identificadores claros que indiquen el propósito de cada variable, función o clase.✅
 Aplique validaciones básicas en los formularios.
-Implemente pruebas unitarias simples.
+Implemente pruebas unitarias simples.✅
 
 ***************Pruebas unitarias
-LISTO -- Se deben implementar mínimo 8 pruebas unitarias.
-LISTO -- Las funciones o clases a probar quedan a criterio del estudiante, pero se recomienda enfocarse en la lógica del programa y validaciones importantes.
-LISTO -- Las pruebas deben estar organizadas en un archivo aparte, por ejemplo: test_logica.py.
+LISTO -- Se deben implementar mínimo 8 pruebas unitarias.✅
+LISTO -- Las funciones o clases a probar quedan a criterio del estudiante, 
+pero se recomienda enfocarse en la lógica del programa y validaciones importantes.✅
+LISTO -- Las pruebas deben estar organizadas en un archivo aparte, por ejemplo: test_logica.py.✅
 
 
 ***************
-LISTO --  Recuerde que las pruebas deben poder ejecutarse de forma independiente, sin depender de la interfaz gráfica.
+LISTO --  Recuerde que las pruebas deben poder ejecutarse de forma independiente, sin depender de la interfaz gráfica.✅
 
 ***************Proceso sugerido
 Hacer mockups de cada ventana.
-Investigar los elementos de FreeSimpleGUI necesarios.
-Diseñar la estructura de datos en memoria (clases y relaciones).
-Dividir el desarrollo en funciones/módulos probables por separado.
-Avanzar paso a paso: no seguir al siguiente módulo sin verificar 
-que el anterior funciona correctamente.
-Documente dudas que le surjan durante el proceso.
+Investigar los elementos de FreeSimpleGUI necesarios.✅
+Diseñar la estructura de datos en memoria (clases y relaciones).✅
+Dividir el desarrollo en funciones/módulos probables por separado.✅
+Avanzar paso a paso: no seguir al siguiente módulo sin verificar ✅
+que el anterior funciona correctamente.✅
+Documente dudas que le surjan durante el proceso.✅
 
 ***************Recomendaciones
-Investigue más sobre los elementos de FreeSimpleGUI en la documentación oficial.
-Lea todos los requerimientos y detalles técnicos cuidadosamente.
-Divida todos los requerimientos en tareas más pequeñas (dividir para conquistar).
-Haga notas de aquellos requerimientos que no sepa cómo desarrollar con exactitud.
-Divida la lógica del programa en funciones pequeñas y módulos.
-Escriba código limpio. Use identificadores específicos y fáciles de entender.
-Pregunte cualquier duda que tenga.
+Investigue más sobre los elementos de FreeSimpleGUI en la documentación oficial.✅
+Lea todos los requerimientos y detalles técnicos cuidadosamente.✅
+Divida todos los requerimientos en tareas más pequeñas (dividir para conquistar).✅
+Haga notas de aquellos requerimientos que no sepa cómo desarrollar con exactitud.✅
+Divida la lógica del programa en funciones pequeñas y módulos.✅
+Escriba código limpio. Use identificadores específicos y fáciles de entender.✅
+Pregunte cualquier duda que tenga.✅
 
 
 ***************Recursos

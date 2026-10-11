@@ -1,0 +1,1002 @@
+[
+    {
+        "movement_date": "2026-07-12",
+        "description": "Pago de quincena",
+        "amount": "750000",
+        "category": {
+            "name": "Salario",
+            "color": "#00FF00"
+        },
+        "type": "Ingreso"
+    },
+    {
+        "movement_date": "2026-07-13",
+        "description": "Compra de supermercado",
+        "amount": "46637",
+        "category": {
+            "name": "Comestible",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-07-14",
+        "description": "Combustible",
+        "amount": "20274",
+        "category": {
+            "name": "Transporte",
+            "color": "#800080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-07-15",
+        "description": "Recibo de electricidad",
+        "amount": "26911",
+        "category": {
+            "name": "Servicios Publicos",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-07-16",
+        "description": "Venta de artículo usado",
+        "amount": "33548",
+        "category": {
+            "name": "Otros Ingresos",
+            "color": "#00FF00"
+        },
+        "type": "Ingreso"
+    },
+    {
+        "movement_date": "2026-07-17",
+        "description": "Cena del fin de semana",
+        "amount": "17185",
+        "category": {
+            "name": "Salida Semanal",
+            "color": "#FFA500"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-07-17",
+        "description": "Pago de cancha de fútbol",
+        "amount": "3322",
+        "category": {
+            "name": "Deportes",
+            "color": "#800080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-07-18",
+        "description": "Compra de medicamentos",
+        "amount": "11709",
+        "category": {
+            "name": "Medicinas",
+            "color": "#808080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-07-19",
+        "description": "Suscripción de streaming",
+        "amount": "5086",
+        "category": {
+            "name": "Entretenimiento",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-07-20",
+        "description": "Compra de frutas y verduras",
+        "amount": "12433",
+        "category": {
+            "name": "Comestible",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-07-21",
+        "description": "Pasajes de autobús",
+        "amount": "3570",
+        "category": {
+            "name": "Transporte",
+            "color": "#800080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-07-22",
+        "description": "Servicio de internet",
+        "amount": "26007",
+        "category": {
+            "name": "Servicios Publicos",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-07-23",
+        "description": "Pago de quincena",
+        "amount": "750000",
+        "category": {
+            "name": "Salario",
+            "color": "#00FF00"
+        },
+        "type": "Ingreso"
+    },
+    {
+        "movement_date": "2026-07-24",
+        "description": "Café y merienda",
+        "amount": "6281",
+        "category": {
+            "name": "Salida Semanal",
+            "color": "#FFA500"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-07-25",
+        "description": "Trabajo freelance",
+        "amount": "44918",
+        "category": {
+            "name": "Otros Ingresos",
+            "color": "#00FF00"
+        },
+        "type": "Ingreso"
+    },
+    {
+        "movement_date": "2026-07-26",
+        "description": "Compra de productos básicos",
+        "amount": "21755",
+        "category": {
+            "name": "Comestible",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-07-27",
+        "description": "Inscripción a actividad deportiva",
+        "amount": "10192",
+        "category": {
+            "name": "Deportes",
+            "color": "#800080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-07-27",
+        "description": "Consulta y medicamentos",
+        "amount": "18329",
+        "category": {
+            "name": "Medicinas",
+            "color": "#808080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-07-28",
+        "description": "Entrada al cine",
+        "amount": "8966",
+        "category": {
+            "name": "Entretenimiento",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-07-29",
+        "description": "Cambio de aceite",
+        "amount": "32603",
+        "category": {
+            "name": "Transporte",
+            "color": "#800080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-07-30",
+        "description": "Pago de quincena",
+        "amount": "750000",
+        "category": {
+            "name": "Salario",
+            "color": "#00FF00"
+        },
+        "type": "Ingreso"
+    },
+    {
+        "movement_date": "2026-07-31",
+        "description": "Compra de supermercado",
+        "amount": "49377",
+        "category": {
+            "name": "Comestible",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-08-01",
+        "description": "Combustible",
+        "amount": "23014",
+        "category": {
+            "name": "Transporte",
+            "color": "#800080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-08-02",
+        "description": "Recibo de electricidad",
+        "amount": "29651",
+        "category": {
+            "name": "Servicios Publicos",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-08-03",
+        "description": "Venta de artículo usado",
+        "amount": "36288",
+        "category": {
+            "name": "Otros Ingresos",
+            "color": "#00FF00"
+        },
+        "type": "Ingreso"
+    },
+    {
+        "movement_date": "2026-08-04",
+        "description": "Cena del fin de semana",
+        "amount": "19925",
+        "category": {
+            "name": "Salida Semanal",
+            "color": "#FFA500"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-08-05",
+        "description": "Pago de cancha de fútbol",
+        "amount": "6062",
+        "category": {
+            "name": "Deportes",
+            "color": "#800080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-08-06",
+        "description": "Compra de medicamentos",
+        "amount": "14449",
+        "category": {
+            "name": "Medicinas",
+            "color": "#808080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-08-06",
+        "description": "Suscripción de streaming",
+        "amount": "7826",
+        "category": {
+            "name": "Entretenimiento",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-08-07",
+        "description": "Compra de frutas y verduras",
+        "amount": "15173",
+        "category": {
+            "name": "Comestible",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-08-08",
+        "description": "Pasajes de autobús",
+        "amount": "2309",
+        "category": {
+            "name": "Transporte",
+            "color": "#800080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-08-09",
+        "description": "Servicio de internet",
+        "amount": "24746",
+        "category": {
+            "name": "Servicios Publicos",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-08-10",
+        "description": "Pago de quincena",
+        "amount": "750000",
+        "category": {
+            "name": "Salario",
+            "color": "#00FF00"
+        },
+        "type": "Ingreso"
+    },
+    {
+        "movement_date": "2026-08-11",
+        "description": "Café y merienda",
+        "amount": "5020",
+        "category": {
+            "name": "Salida Semanal",
+            "color": "#FFA500"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-08-12",
+        "description": "Trabajo freelance",
+        "amount": "43657",
+        "category": {
+            "name": "Otros Ingresos",
+            "color": "#00FF00"
+        },
+        "type": "Ingreso"
+    },
+    {
+        "movement_date": "2026-08-13",
+        "description": "Compra de productos básicos",
+        "amount": "20494",
+        "category": {
+            "name": "Comestible",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-08-14",
+        "description": "Inscripción a actividad deportiva",
+        "amount": "8931",
+        "category": {
+            "name": "Deportes",
+            "color": "#800080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-08-15",
+        "description": "Consulta y medicamentos",
+        "amount": "17068",
+        "category": {
+            "name": "Medicinas",
+            "color": "#808080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-08-16",
+        "description": "Entrada al cine",
+        "amount": "7705",
+        "category": {
+            "name": "Entretenimiento",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-08-16",
+        "description": "Cambio de aceite",
+        "amount": "31342",
+        "category": {
+            "name": "Transporte",
+            "color": "#800080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-08-17",
+        "description": "Pago de quincena",
+        "amount": "750000",
+        "category": {
+            "name": "Salario",
+            "color": "#00FF00"
+        },
+        "type": "Ingreso"
+    },
+    {
+        "movement_date": "2026-08-18",
+        "description": "Compra de supermercado",
+        "amount": "48116",
+        "category": {
+            "name": "Comestible",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-08-19",
+        "description": "Combustible",
+        "amount": "21753",
+        "category": {
+            "name": "Transporte",
+            "color": "#800080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-08-20",
+        "description": "Recibo de electricidad",
+        "amount": "28390",
+        "category": {
+            "name": "Servicios Publicos",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-08-21",
+        "description": "Venta de artículo usado",
+        "amount": "35027",
+        "category": {
+            "name": "Otros Ingresos",
+            "color": "#00FF00"
+        },
+        "type": "Ingreso"
+    },
+    {
+        "movement_date": "2026-08-22",
+        "description": "Cena del fin de semana",
+        "amount": "18664",
+        "category": {
+            "name": "Salida Semanal",
+            "color": "#FFA500"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-08-23",
+        "description": "Pago de cancha de fútbol",
+        "amount": "4801",
+        "category": {
+            "name": "Deportes",
+            "color": "#800080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-08-24",
+        "description": "Compra de medicamentos",
+        "amount": "13188",
+        "category": {
+            "name": "Medicinas",
+            "color": "#808080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-08-25",
+        "description": "Suscripción de streaming",
+        "amount": "6565",
+        "category": {
+            "name": "Entretenimiento",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-08-26",
+        "description": "Compra de frutas y verduras",
+        "amount": "13912",
+        "category": {
+            "name": "Comestible",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-08-26",
+        "description": "Pasajes de autobús",
+        "amount": "5049",
+        "category": {
+            "name": "Transporte",
+            "color": "#800080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-08-27",
+        "description": "Servicio de internet",
+        "amount": "27486",
+        "category": {
+            "name": "Servicios Publicos",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-08-28",
+        "description": "Pago de quincena",
+        "amount": "750000",
+        "category": {
+            "name": "Salario",
+            "color": "#00FF00"
+        },
+        "type": "Ingreso"
+    },
+    {
+        "movement_date": "2026-08-29",
+        "description": "Café y merienda",
+        "amount": "7760",
+        "category": {
+            "name": "Salida Semanal",
+            "color": "#FFA500"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-08-30",
+        "description": "Trabajo freelance",
+        "amount": "46397",
+        "category": {
+            "name": "Otros Ingresos",
+            "color": "#00FF00"
+        },
+        "type": "Ingreso"
+    },
+    {
+        "movement_date": "2026-08-31",
+        "description": "Compra de productos básicos",
+        "amount": "23234",
+        "category": {
+            "name": "Comestible",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-09-01",
+        "description": "Inscripción a actividad deportiva",
+        "amount": "11671",
+        "category": {
+            "name": "Deportes",
+            "color": "#800080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-09-02",
+        "description": "Consulta y medicamentos",
+        "amount": "19808",
+        "category": {
+            "name": "Medicinas",
+            "color": "#808080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-09-03",
+        "description": "Entrada al cine",
+        "amount": "10445",
+        "category": {
+            "name": "Entretenimiento",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-09-04",
+        "description": "Cambio de aceite",
+        "amount": "30081",
+        "category": {
+            "name": "Transporte",
+            "color": "#800080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-09-05",
+        "description": "Pago de quincena",
+        "amount": "750000",
+        "category": {
+            "name": "Salario",
+            "color": "#00FF00"
+        },
+        "type": "Ingreso"
+    },
+    {
+        "movement_date": "2026-09-05",
+        "description": "Compra de supermercado",
+        "amount": "46855",
+        "category": {
+            "name": "Comestible",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-09-06",
+        "description": "Combustible",
+        "amount": "20492",
+        "category": {
+            "name": "Transporte",
+            "color": "#800080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-09-07",
+        "description": "Recibo de electricidad",
+        "amount": "27129",
+        "category": {
+            "name": "Servicios Publicos",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-09-08",
+        "description": "Venta de artículo usado",
+        "amount": "33766",
+        "category": {
+            "name": "Otros Ingresos",
+            "color": "#00FF00"
+        },
+        "type": "Ingreso"
+    },
+    {
+        "movement_date": "2026-09-09",
+        "description": "Cena del fin de semana",
+        "amount": "17403",
+        "category": {
+            "name": "Salida Semanal",
+            "color": "#FFA500"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-09-10",
+        "description": "Pago de cancha de fútbol",
+        "amount": "3540",
+        "category": {
+            "name": "Deportes",
+            "color": "#800080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-09-11",
+        "description": "Compra de medicamentos",
+        "amount": "11927",
+        "category": {
+            "name": "Medicinas",
+            "color": "#808080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-09-12",
+        "description": "Suscripción de streaming",
+        "amount": "5304",
+        "category": {
+            "name": "Entretenimiento",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-09-13",
+        "description": "Compra de frutas y verduras",
+        "amount": "12651",
+        "category": {
+            "name": "Comestible",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-09-14",
+        "description": "Pasajes de autobús",
+        "amount": "3788",
+        "category": {
+            "name": "Transporte",
+            "color": "#800080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-09-15",
+        "description": "Servicio de internet",
+        "amount": "26225",
+        "category": {
+            "name": "Servicios Publicos",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-09-15",
+        "description": "Pago de quincena",
+        "amount": "750000",
+        "category": {
+            "name": "Salario",
+            "color": "#00FF00"
+        },
+        "type": "Ingreso"
+    },
+    {
+        "movement_date": "2026-09-16",
+        "description": "Café y merienda",
+        "amount": "6499",
+        "category": {
+            "name": "Salida Semanal",
+            "color": "#FFA500"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-09-17",
+        "description": "Trabajo freelance",
+        "amount": "45136",
+        "category": {
+            "name": "Otros Ingresos",
+            "color": "#00FF00"
+        },
+        "type": "Ingreso"
+    },
+    {
+        "movement_date": "2026-09-18",
+        "description": "Compra de productos básicos",
+        "amount": "21973",
+        "category": {
+            "name": "Comestible",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-09-19",
+        "description": "Inscripción a actividad deportiva",
+        "amount": "10410",
+        "category": {
+            "name": "Deportes",
+            "color": "#800080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-09-20",
+        "description": "Consulta y medicamentos",
+        "amount": "18547",
+        "category": {
+            "name": "Medicinas",
+            "color": "#808080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-09-21",
+        "description": "Entrada al cine",
+        "amount": "9184",
+        "category": {
+            "name": "Entretenimiento",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-09-22",
+        "description": "Cambio de aceite",
+        "amount": "32821",
+        "category": {
+            "name": "Transporte",
+            "color": "#800080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-09-23",
+        "description": "Pago de quincena",
+        "amount": "750000",
+        "category": {
+            "name": "Salario",
+            "color": "#00FF00"
+        },
+        "type": "Ingreso"
+    },
+    {
+        "movement_date": "2026-09-24",
+        "description": "Compra de supermercado",
+        "amount": "49595",
+        "category": {
+            "name": "Comestible",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-09-25",
+        "description": "Combustible",
+        "amount": "23232",
+        "category": {
+            "name": "Transporte",
+            "color": "#800080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-09-25",
+        "description": "Recibo de electricidad",
+        "amount": "29869",
+        "category": {
+            "name": "Servicios Publicos",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-09-26",
+        "description": "Venta de artículo usado",
+        "amount": "36506",
+        "category": {
+            "name": "Otros Ingresos",
+            "color": "#00FF00"
+        },
+        "type": "Ingreso"
+    },
+    {
+        "movement_date": "2026-09-27",
+        "description": "Cena del fin de semana",
+        "amount": "20143",
+        "category": {
+            "name": "Salida Semanal",
+            "color": "#FFA500"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-09-28",
+        "description": "Pago de cancha de fútbol",
+        "amount": "6280",
+        "category": {
+            "name": "Deportes",
+            "color": "#800080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-09-29",
+        "description": "Compra de medicamentos",
+        "amount": "14667",
+        "category": {
+            "name": "Medicinas",
+            "color": "#808080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-09-30",
+        "description": "Suscripción de streaming",
+        "amount": "4043",
+        "category": {
+            "name": "Entretenimiento",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-10-01",
+        "description": "Compra de frutas y verduras",
+        "amount": "11390",
+        "category": {
+            "name": "Comestible",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-10-02",
+        "description": "Pasajes de autobús",
+        "amount": "2527",
+        "category": {
+            "name": "Transporte",
+            "color": "#800080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-10-03",
+        "description": "Servicio de internet",
+        "amount": "24964",
+        "category": {
+            "name": "Servicios Publicos",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-10-04",
+        "description": "Pago de quincena",
+        "amount": "750000",
+        "category": {
+            "name": "Salario",
+            "color": "#00FF00"
+        },
+        "type": "Ingreso"
+    },
+    {
+        "movement_date": "2026-10-05",
+        "description": "Café y merienda",
+        "amount": "5238",
+        "category": {
+            "name": "Salida Semanal",
+            "color": "#FFA500"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-10-05",
+        "description": "Trabajo freelance",
+        "amount": "43875",
+        "category": {
+            "name": "Otros Ingresos",
+            "color": "#00FF00"
+        },
+        "type": "Ingreso"
+    },
+    {
+        "movement_date": "2026-10-06",
+        "description": "Compra de productos básicos",
+        "amount": "20712",
+        "category": {
+            "name": "Comestible",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-10-07",
+        "description": "Inscripción a actividad deportiva",
+        "amount": "9149",
+        "category": {
+            "name": "Deportes",
+            "color": "#800080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-10-08",
+        "description": "Consulta y medicamentos",
+        "amount": "17286",
+        "category": {
+            "name": "Medicinas",
+            "color": "#808080"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-10-09",
+        "description": "Entrada al cine",
+        "amount": "7923",
+        "category": {
+            "name": "Entretenimiento",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-10-10",
+        "description": "Cambio de aceite",
+        "amount": "31560",
+        "category": {
+            "name": "Transporte",
+            "color": "#800080"
+        },
+        "type": "Gasto"
+    }
+]
