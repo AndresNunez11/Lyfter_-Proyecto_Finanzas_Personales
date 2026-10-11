@@ -1,3 +1,4 @@
+from UI.principalmenuclass import principal_menu_GUI
 from business_logic.menu import menu
 
 # Variables Globales
@@ -5,11 +6,18 @@ from business_logic.menu import menu
 PATH_JSON_CAT = 'source/jsoncategoriesfile.json'
 PATH_JSON_MOV = 'source/jsonmovementsfile.json'
 PATH_CSV_REPORT = 'Lyfter_Gestor_Finanzas_Personales/REPORT.csv'
+CURRENT_THEME = "LightBlue1"
 
 #Funcion principal del sistema 
 def main(PATH_JSON_CAT, PATH_JSON_MOV, PATH_CSV_REPORT):
     try:
-        menu(PATH_JSON_CAT, PATH_JSON_MOV, PATH_CSV_REPORT)
+        principal_menu_GUI(
+            PATH_JSON_CAT,
+            PATH_JSON_MOV,
+            PATH_CSV_REPORT,
+            CURRENT_THEME
+        )
+        # menu(PATH_JSON_CAT, PATH_JSON_MOV, PATH_CSV_REPORT)
     except Exception as e:
         print(f'Existe un error al iniciar la aplicacion {e}')
 
