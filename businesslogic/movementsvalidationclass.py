@@ -38,7 +38,7 @@ class movement_validation:
     # Exception para validar que la fecha no sea mayor a hoy
     @staticmethod
     def validate_date(input_date):
-        formatos = ["%d-%m-%Y", "%d/%m/%Y"]
+        formatos = ["%d-%m-%Y", "%d/%m/%Y", "%Y-%m-%d"]
         for formato in formatos:
             try:
                 fecha = datetime.strptime(input_date, formato).date()

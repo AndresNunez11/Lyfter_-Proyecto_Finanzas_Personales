@@ -4,6 +4,10 @@
         "color": "#00FF00"
     },
     {
+        "name": "Transporte",
+        "color": "#800080"
+    },
+    {
         "name": "Deportes",
         "color": "#800080"
     },
@@ -18,5 +22,18 @@
     {
         "name": "Servicios Publicos",
         "color": "#A52A2A"
+    },
+    {
+        "name": "Otros Ingresos",
+        "color": "#00FF00"
+    },
+    {
+        "name": "Entretenimiento",
+        "color": "#A52A2A"
+    },
+    {
+        "name": "Comestible",
+        "color": "#A52A2A"
     }
 ]
+

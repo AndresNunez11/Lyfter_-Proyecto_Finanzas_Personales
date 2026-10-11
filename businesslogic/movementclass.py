@@ -1,5 +1,5 @@
-from movementsvalidationclass import movement_validation
-from categoryclass import Category
+from businesslogic.movementsvalidationclass import movement_validation
+from businesslogic.categoryclass import Category
 
 class Movement:
 
@@ -29,7 +29,7 @@ class Movement:
         return self._amount
     @amount.setter
     def amount(self, amount):
-        self._amount = movement_validation.no_negative_number(amount)
+        self._amount = movement_validation.no_negative_number(int(amount))
 
     @property 
     def category(self):
@@ -51,17 +51,17 @@ class Movement:
     # Movimientos:- 02/07/2025 | Salario | ₡1000- 03/07/2025 | Comida | ₡-20
     # description, amount, category, type
     def __str__(self):
-        return f"Movimiento:\n Fecha: {self.date} | Descripcion:{self.descripction} | Monto: {self.amount} | Categoria: {self.category} | Tipo: {self.type} \n"
+        return f"Movimiento:\n Fecha: {self.date} | Descripcion:{self.description} | Monto: {self.amount} | Categoria: {self.category.name} | Tipo: {self.type} \n"
 
     def __repr__(self):
-        return f"Movimientos: (Fecha: '{self.date}' | Descripcion: '{self.descripction}' | Monto: '{self.amount}' | Categoria: '{self.category}' | Tipo: '{self.type}' )\n"
+        return f"Movimientos: (Fecha: '{self.date}' | Descripcion: '{self.description}' | Monto: '{self.amount}' | Categoria: '{self.category.name}' | Tipo: '{self.type}' )\n"
 
     # Lo convierte en un diccionario para poder llevarlo al formato Json
     def to_dict(self):
         return {
-            "date": str(self.date), 
-            "description": self.descripction, 
+            "movement_date": str(self.date), 
+            "description": self.description, 
             "amount":str(self.amount), 
-            "category": str(self.category),
+            "category": self.category.to_dict(),
             "type": self.type
         }
