@@ -1,12 +1,15 @@
 
 import FreeSimpleGUI as sg
+from business_logic.financemanagerclass import finance_manager
+
+actions = finance_manager()
 
 
-def create_financial_indicators():
+def create_financial_indicators(path_json_file):
 
-    balance = 0
-    income = 0
-    expenses = 0
+    balance =  f"₡{float(actions.Global_balance(path_json_file)):,.2f}"
+    income = f"₡{float(actions.incoming_balance(path_json_file)):,.2f}"
+    expenses = f"₡{float(actions.expense_balance(path_json_file)):,.2f}"
 
 
 

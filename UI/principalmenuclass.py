@@ -5,7 +5,7 @@ from UI.createmainwindowclas import create_main_window
 def principal_menu_GUI(path_json_cat, path_json_mov, path_csv_report, theme):
     
     current_theme = theme
-    window = create_main_window(current_theme)
+    window = create_main_window(current_theme,path_json_cat, path_json_mov,path_csv_report)
 
     # Iniciamos el Event Loop
     while True:
@@ -28,7 +28,6 @@ def principal_menu_GUI(path_json_cat, path_json_mov, path_csv_report, theme):
         # Menú Reportes
         elif event == "Consultar reportes":
             print("Consultar reportes")
-        
         elif event == "Exportar CSV":
             print(f"Archivo de reporte: {path_csv_report}")
         
@@ -36,24 +35,14 @@ def principal_menu_GUI(path_json_cat, path_json_mov, path_csv_report, theme):
         elif event == "Tema claro":
             current_theme = "LightBlue1"
             window.close()
-            window = create_main_window(current_theme)
-            print("Ventana:", window.size)
-            print("Columna:", window["-SCROLL-"].get_size())
+            window = create_main_window(current_theme,path_json_cat, path_json_mov,path_csv_report)  
         elif event == "Tema oscuro":
             current_theme = "DarkGrey2"
             window.close()
-            window = create_main_window(current_theme)
+            window = create_main_window(current_theme,path_json_cat, path_json_mov,path_csv_report)  
         
         
         # Codigo para evaluar los diferentes eventos en la ventana
         elif event == "Exportar Reporte":
                     print(f"Archivo de reporte: {path_csv_report}")
-        if event == "-LIGHT-":
-            window.close()
-            current_theme = "LightBlue1"
-            window = create_main_window(current_theme)
-        if event == "-DARK-":
-            window.close()
-            current_theme = "DarkGrey2"
-            window = create_main_window(current_theme)        
     window.close()

@@ -12,7 +12,7 @@ def create_footer():
                 [
                     [
                         sg.Text(
-                            "© 2026 IQF - Smart Finance - Dev by Andres Nunez Solano",
+                            "© 2026 IQ - Smart Finance - Dev by Andres Nunez Solano",
                             text_color=text_color,
                             background_color=background,
                             font=("Arial", 9),

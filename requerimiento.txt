@@ -135,4 +135,58 @@ A nivel de base de datos:
 /*----------------------------------------Primera Entrega----------------------------------------------------------*/
 28-09-2026 Se entrega un avance a la plataforma antes de iniciar con la construccion del front end.
 
+1- Todavía faltan los requisitos centrales de la interfaz: 
+la tabla de movimientos en la ventana principal, 
+los botones para agregar categoría, 
+gasto e ingreso que abren su propia ventana, 
+y el mensaje de error cuando no hay categorías disponibles. 
+Por ahora los botones Categorías, Movimientos y Exportar Reporte solo hacen print. 
+Revisa el elemento sg.Table y cómo abrir una segunda ventana con su propio event loop para los formularios.
+
+2- La interfaz todavía no está conectada con la lógica de negocio. principal_menu_GUI recibe las rutas de los JSON pero nunca las usa,
+y en create_financial_indicators el balance, los ingresos y los gastos están fijos en 0. 
+Verifica cómo crear una instancia de finance_manager al iniciar la app y usar las keys 
+BALANCE-, INCOME- y EXPENSES- con window[...].update() para mostrar los valores reales.
+
+✅ 3- En principal_menu_GUI hay lógica repetida: el cambio de tema está escrito cuatro veces 
+(dos desde el menú y dos desde los botones), y "Salir" se evalúa dos veces, 
+así que el segundo elif event == "Salir" nunca se ejecuta. 
+Además, después de la cadena de elif hay dos if sueltos. 
+Revisa cómo agrupar eventos que hacen lo mismo y extraer el cambio de tema a una función pequeña.
+
+✅ 4- Quedaron print de depuración en el event loop, por ejemplo print("Ventana:", window.size) y 
+print("Columna:", ...). Recuerda limpiarlos antes de entregar.
+
+5- Hay un bug en movement_validation.validate_date: el ValueError de "La fecha no puede ser mayor que hoy" 
+se lanza dentro del mismo try que lo atrapa con except ValueError: continue, 
+así que una fecha futura termina mostrando "Formato de fecha inválido". 
+Prueba crear un movimiento con una fecha de mañana y revisa qué mensaje recibes.
+Sería una buena prueba unitaria para agregar.
+
+6- Los métodos de finance_manager leen el JSON completo cada vez que se llaman 
+(add_category, incoming_balance, expense_balance, etc.), por lo que self.categories y self.movements 
+no se están usando realmente como estado en memoria. 
+Ahora que la GUI va a llamar a estos métodos en cada evento, 
+revisa cómo cargar los datos una sola vez al iniciar y guardar en el archivo solo cuando hay un cambio.
+
+7- En este PR se subieron archivos .pyc dentro de UI/__pycache__/. El .gitignore ya excluye __pycache__/, 
+pero esos archivos se agregaron antes y Git los sigue rastreando. 
+Investiga cómo dejar de rastrear archivos que ya están en el repo sin borrarlos de tu disco. 
+De paso, revisa la línea .pytest_cache__/, porque la carpeta que genera pytest se llama distinto.
+Los nombres de los módulos de UI no reflejan lo que contienen: createmainwindowclas.py tiene un typo, 
+y financialindicatorsclass.py, footerclass.py y principalmenuclass.py terminan en class pero solo contienen funciones. 
+Verifica que el nombre de cada archivo describa su contenido real.
+
+8- Las clases finance_manager, movement_validation y category_validation están en snake_case, 
+y el método Global_balance empieza con mayúscula. Revisa la convención de PEP 8 para nombres de clases y métodos 
+para que todo el proyecto quede consistente.
+
+9- Todos los identificadores del código deben estar en inglés. 
+En correcion.py aparecen corregir_formato_categorias, 
+movimientos, archivo, coincidencia, y en las validaciones 
+formatos, fecha y patron. Además, correcion.py ejecuta la corrección 
+apenas se importa y apunta a jsonmovementsfile copy.json, 
+que no existe en el repo. 
+Si era un script de un solo uso, valora si debe quedarse en el proyecto junto con jsonmovementsfile_corregido.json.
+
 

@@ -3,7 +3,7 @@ from UI.financialindicatorsclass import create_financial_indicators
 from UI.footerclass import create_footer
 
 #Funcion para la pantalla principal
-def create_main_window(theme):
+def create_main_window(theme,path_json_cat, path_json_mov,path_csv_report):
 
     sg.theme(theme)
     menu_definition = [
@@ -13,7 +13,7 @@ def create_main_window(theme):
         ["Configuración", ["Tema claro", "Tema oscuro"]]
     ]
 
-    indicators = create_financial_indicators()
+    indicators = create_financial_indicators(path_json_mov)
     footer = create_footer()
 
     layout = [
@@ -22,8 +22,8 @@ def create_main_window(theme):
                 font=("Arial", 14))],
         [
         sg.Push(),
-        sg.Button("☀ Claro", key="-LIGHT-", size=(8,0), font=("Arial", 12, "bold")),
-        sg.Button("🌙 Oscuro", key="-DARK-", size=(8,0), font=("Arial", 12, "bold") ),
+        sg.Button("☀ Claro", key="Tema claro", size=(8,0), font=("Arial", 12, "bold")),
+        sg.Button("🌙 Oscuro", key="Tema oscuro", size=(8,0), font=("Arial", 12, "bold") ),
         sg.Button("Salir", size=(8,0), font=("Arial", 12, "bold"))
         ],
         [sg.Text("GESTIÓN DE FINANZAS PERSONALES", font=("Arial", 20, "bold"))],
@@ -73,7 +73,7 @@ def create_main_window(theme):
         ],
         [footer]
     ] 
-    window = sg.Window("IQF - Smart Finance", 
+    window = sg.Window("IQ - Smart Finance", 
                     layout, 
                     size=(1300, 650), 
                     resizable=True, 
