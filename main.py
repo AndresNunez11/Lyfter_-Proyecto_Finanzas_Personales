@@ -1,5 +1,5 @@
-from UI.principalmenuclass import principal_menu_GUI
-from business_logic.menu import menu
+from UI.principalmenufn import principal_menu_GUI
+# from business_logic.menu import menu
 
 # Variables Globales
 #Utilizar la variable global en la mayuscula cuando es inmutable -- 

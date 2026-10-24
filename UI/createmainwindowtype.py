@@ -1,9 +1,12 @@
 import FreeSimpleGUI as sg
-from UI.financialindicatorsclass import create_financial_indicators
-from UI.footerclass import create_footer
+from UI.financialindicatorsfn import create_financial_indicators
+from UI.movementtablefn import movement_table
+from UI.filtermovementfn import filter_table
+from business_logic.financemanagerclass import finance_manager
+from UI.footerfn import create_footer
 
 #Funcion para la pantalla principal
-def create_main_window(theme,path_json_cat, path_json_mov,path_csv_report):
+def create_main_window(theme,action:finance_manager):
 
     sg.theme(theme)
     menu_definition = [
@@ -13,8 +16,11 @@ def create_main_window(theme,path_json_cat, path_json_mov,path_csv_report):
         ["Configuración", ["Tema claro", "Tema oscuro"]]
     ]
 
-    indicators = create_financial_indicators(path_json_mov)
+    indicators = create_financial_indicators(action)
     footer = create_footer()
+    filter_movement_list = filter_table()
+    w_movement_table = movement_table(action) 
+    
 
     layout = [
         [sg.Menu(menu_definition,
@@ -59,7 +65,10 @@ def create_main_window(theme,path_json_cat, path_json_mov,path_csv_report):
                         expand_x=True,
                         expand_y=True,
                         pad=(0,0))
-                    ]
+                    ],
+                    [sg.HorizontalSeparator()],
+                    [filter_movement_list],
+                    [w_movement_table]
                 ],
             scrollable=True,
             vertical_scroll_only=True,
