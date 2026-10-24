@@ -18,6 +18,7 @@ venv/
 .DS_Store
 Thumbs.db
 
-#Archivo para corregir Json, uso unico
+# Archivo para corregir JSON, uso único
 correction.py
+
 
