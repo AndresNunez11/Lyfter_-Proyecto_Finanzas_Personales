@@ -11,6 +11,10 @@ class EmptyTypeError(Exception):
     def __init__(self):
         super().__init__(f'\n El dato no puede estar vacio')
 
+class FormatError(Exception):
+    def __init__(self):
+        super().__init__(f'\n La fecha no puede ser posterior al dia de hoy')
+
 
 class movement_validation:
 
@@ -38,13 +42,13 @@ class movement_validation:
     # Exception para validar que la fecha no sea mayor a hoy
     @staticmethod
     def validate_date(input_date):
-        formatos = ["%d-%m-%Y", "%d/%m/%Y", "%Y-%m-%d"]
-        for formato in formatos:
+        formats = ["%d-%m-%Y", "%d/%m/%Y", "%Y-%m-%d"]
+        for format in formats:
             try:
-                fecha = datetime.strptime(input_date, formato).date()
-                if fecha > date.today():
-                    raise ValueError("La fecha no puede ser mayor que hoy")
-                return fecha
+                date_m = datetime.strptime(input_date, format).date()
+                if date_m > date.today():
+                    raise FormatError()
+                return date_m
             except ValueError:
                 continue
         raise ValueError("Formato de fecha inválido. Use DD-MM-YYYY")

@@ -1,5 +1,5 @@
 from business_logic.movementclass import Movement
-from business_logic.movementsvalidationclass import movement_validation, EmptyTypeError
+from business_logic.movementsvalidationclass import movement_validation, EmptyTypeError, FormatError, NameTypeError
 from business_logic.financemanagerclass import finance_manager
 from business_logic.categoryclass import Category
 from datetime import date
@@ -56,7 +56,7 @@ def test_add_wrong_date_after_today_movement():
     category = Category('Salario','#000000')
     m_type = 'Ingreso'
     #Act
-    with pytest.raises(ValueError):
+    with pytest.raises(FormatError):
         Movement(m_date, description, amount, category, m_type)
 
 def test_add_negative_amount_wrong_movement():
