@@ -177,7 +177,7 @@ Los nombres de los módulos de UI no reflejan lo que contienen: createmainwindow
 y financialindicatorsclass.py, footerclass.py y principalmenuclass.py terminan en class pero solo contienen funciones. 
 Verifica que el nombre de cada archivo describa su contenido real.
 
-✅ 8- Las clases finance_manager, movement_validation y category_validation están en snake_case, 
+8- Las clases finance_manager, movement_validation y category_validation están en snake_case, 
 y el método Global_balance empieza con mayúscula. Revisa la convención de PEP 8 para nombres de clases y métodos 
 para que todo el proyecto quede consistente.
 
