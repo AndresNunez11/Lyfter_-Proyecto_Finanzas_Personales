@@ -1,5 +1,5 @@
-__pycache__/ 
-.pytest_cache__/ 
+# Cache de pytest
+.pytest_cache/ 
 
 # Archivos compilados de Python
 __pycache__/
@@ -17,4 +17,7 @@ venv/
 # Sistema operativo
 .DS_Store
 Thumbs.db
+
+#Archivo para corregir Json, uso unico
+correction.py
 
