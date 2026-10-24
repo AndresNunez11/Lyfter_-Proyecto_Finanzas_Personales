@@ -5,7 +5,7 @@ from business_logic.categoryjsonfile import category_read_json_file, category_sa
 from business_logic.movementjsonfile import movement_read_json_file, movement_save_json_file
 
 
-class CategoryExistsError(Exception):
+class categoryexistserror(Exception):
     def __init__(self):
         super().__init__("Ya existe una categoría con ese nombre")
 
@@ -23,7 +23,7 @@ class finance_manager:
         # self.categories = category_read_json_file(path_json_file) #Se iguala para que entienda que es una lista de categorias
         for exist_category in self.categories:
             if exist_category.name.lower() == category.name.lower():
-                raise CategoryExistsError()
+                raise categoryexistserror()
         self.categories.append(category)
         category_save_json_file(self.categories, self.path_categories)
         print(f'Categorias: \n{self.categories}')
