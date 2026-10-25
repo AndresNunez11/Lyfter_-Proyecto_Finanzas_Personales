@@ -91,3 +91,4 @@ def create_main_window(theme,action:finance_manager):
                     # background_color="#1F4E78",
                     font=("Arial", 20, "bold"))
     return window  
+

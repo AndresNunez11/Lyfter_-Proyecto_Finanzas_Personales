@@ -3,38 +3,97 @@ from UI.createmainwindowtype import create_main_window
 from business_logic.financemanagerclass import finance_manager
 from datetime import datetime
 from UI.movementtablefn import movement_table, movement_table_data
+from UI.createcategorywindowtype import create_category_window
 
 
 def principal_menu_GUI(path_json_cat, path_json_mov, path_csv_report, theme):
 
     action = finance_manager(path_json_cat, path_json_mov,path_csv_report)
     current_theme = theme
-    window = create_main_window(current_theme,action)
+    main_window = create_main_window(current_theme,action) 
+    windows = {
+    "main": main_window
+    }
 
     # Iniciamos el Event Loop
     while True:
         # El programa se "detiene" aquí (bloqueo) esperando una acción
-        event, values = window.read()
+        window, event, values = sg.read_all_windows()
+        
         # Si el usuario cierra la ventana, rompemos el ciclo
+        # ===============================================#
+            # si cierras una ventana secundaria con la X, 
+            # también la eliminas del diccionario. 
+            # Si cierras la principal, sales del event loop
+        #================================================#
         if event in (sg.WINDOW_CLOSED, "Salir"):
-            break
+            if window == windows["main"]:
+                break
+            for key, open_window in list(windows.items()):
+                if open_window == window:
+                    open_window.close()
+                    del windows[key]
+                    break
+            continue
+
         # Menú Inicio
         elif event == "Principal":
             print("Mostrar pantalla principal")
         elif event == "Salir":
             break
+        
         # Menú Administración
-        elif event == "Categorías":
-            print("Abrir gestión de categorías")
+        # ------------Categorias-------------------------#
+        # Abrir Categorías
+        #========================================================#
+            # Se reemplza el esta validando por una variable, 
+            # para validar por un diccionario, 
+            # mejor practica para una estructura mas solida. 
+        #========================================================#
+        elif window == windows["main"] and event == "Categorías":
+            if "categories" not in windows:
+                windows["categories"] = create_category_window(current_theme,action)
+
+        # elif window == main_window and event =="Categorías":
+        #     if categories_window is None:
+        #         categories_window = create_category_window(current_theme,action)
+        #         windows.append(categories_window)
+        
+        # Cerrar Categorías // Asegura que el evento corresponda a la ventana de Categorías
+        #========================================================#
+            # Se reemplza el esta validando por una variable, 
+            # para validar por un diccionario, 
+            # mejor practica para una estructura mas solida. 
+        #========================================================#
+        elif ("categories" in windows and window == windows["categories"] and event == "-CLOSE-CATEGORY-"):
+            window.close()
+            del windows["categories"]
+        
+        # elif event == "-CLOSE-CATEGORY-":
+        #     window.close()
+        #     categories_window = None
+        #     if window in windows:
+        #         windows.remove(window)
+        
+        
+        # Guardar categoría
+        elif event == "-SAVE-CATEGORY-":
+            name = values["-CATEGORY-NAME-"]
+            color = values["-CATEGORY-COLOR-"]
+            print("Nombre:", name)
+            print("Color:", color)
+
+        # ------------MOvimientos-------------------------#
         elif event == "Movimientos":
             print("Abrir gestión de movimientos")
-        
-        # Menú Reportes
+
+        # ------------Reportes-------------------------#
         elif event == "Consultar reportes":
             print("Consultar reportes")
         elif event == "Exportar CSV":
             print(f"Archivo de reporte: {path_csv_report}")
         
+        # ------------Configuracion del tema-------------------------#
         # Menú Configuración
         elif event == "Tema claro":
             current_theme = "LightBlue1"
@@ -124,4 +183,11 @@ def principal_menu_GUI(path_json_cat, path_json_mov, path_csv_report, theme):
 
         elif event == "Exportar Reporte":
                     print(f"Archivo de reporte: {path_csv_report}")
-    window.close()
+    # window.close()
+    #====================================================================#
+    # Esto garantiza que se cierren todas las ventanas registradas al salir
+    #====================================================================#
+    for open_window in list(windows.values()):
+        open_window.close()
+
+    windows.clear()
