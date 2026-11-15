@@ -26,7 +26,7 @@ class finance_manager:
                 raise categoryexistserror()
         self.categories.append(category)
         category_save_json_file(self.categories, self.path_categories)
-        print(f'Categorias: \n{self.categories}')
+        # print(f'Categorias: \n{self.categories}')
         return self.categories
 
     def add_movement(self, movement:Movement):

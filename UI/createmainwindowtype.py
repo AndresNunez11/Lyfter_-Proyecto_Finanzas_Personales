@@ -67,7 +67,7 @@ def create_main_window(theme,action:finance_manager):
                         pad=(0,0))
                     ],
                     [sg.HorizontalSeparator()],
-                    [filter_movement_list],
+                    *filter_movement_list, #SUSTITUYE [filter_movement_list] POR *filter_movement_list -> Esto incorpora directamente las filas del filtro al layout principal, sin crear un Column adicional.
                     [w_movement_table]
                 ],
             scrollable=True,
@@ -75,11 +75,12 @@ def create_main_window(theme,action:finance_manager):
             # size=(1260, 600),
             expand_x=True,
             expand_y=True,
-            key="-SCROLL-",
+            # key="-SCROLL-",
             pad=(0,0),
             # background_color="#1F2937"
             )   
         ],
+        [sg.HorizontalSeparator()],
         [footer]
     ] 
     window = sg.Window("IQ - Smart Finance", 

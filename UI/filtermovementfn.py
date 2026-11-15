@@ -18,29 +18,41 @@ def filter_table():
                 key="-START-DATE-",
                 size=(12, 1),
                 visible=False,
-                readonly=True
+                # readonly=True
             ),
-            sg.CalendarButton(
-                "Seleccionar",
-                target="-START-DATE-",
-                format="%d/%m/%Y",
-                key="-START-CALENDAR-",
+            sg.Button(
+                "📅",
+                key="-PICK-START-",
                 visible=False
             ),
+            # sg.CalendarButton(
+            #     "Seleccionar fecha",
+            #     target="-START-DATE-",
+            #     format="%d/%m/%Y",
+            #     key="-START-CALENDAR-",
+            #     visible=False,
+            #     close_when_date_chosen=True
+            # ),
             sg.Text("Fecha fin:", key="-END-LABEL-", visible=False),
             sg.Input(
                 key="-END-DATE-",
                 size=(12, 1),
                 visible=False,
-                readonly=True
+                # readonly=True
             ),
-            sg.CalendarButton(
-                "Seleccionar",
-                target="-END-DATE-",
-                format="%d/%m/%Y",
-                key="-END-CALENDAR-",
+            sg.Button(
+                "📅",
+                key="-PICK-END-",
                 visible=False
             ),
+            # sg.CalendarButton(
+            #     "Seleccionar fecha",
+            #     target="-END-DATE-",
+            #     format="%d/%m/%Y",
+            #     key="-END-CALENDAR-",
+            #     visible=False,
+            #     close_when_date_chosen=True
+            # ),
             sg.Button(
                 "Filtrar",
                 key="-FILTER-DATES-",
@@ -48,10 +60,12 @@ def filter_table():
             )
         ]
     ]
+    return filter_layout
 
-    return sg.Column(
-        filter_layout,
-        key="-FILTER-TABLE-",
-        expand_x=True,
-        pad=(5, 5)
-    )
+    # NO RETORNE UNA COLUMNA SI NO EL LAYOUT
+    # return sg.Column(
+    #     filter_layout,
+    #     key="-FILTER-TABLE-",
+    #     expand_x=True,
+    #     pad=(5, 5)
+    # )

@@ -15,10 +15,10 @@ def category_table_data(categories):
         ])
 
         # El color de la categoría se usa como fondo de la fila.
-        background = category.color
-        text_color = "#FFFFFF"
+        background = "#FFFFFF"
+        text_color = category.color
 
-        row_colors.append((index, background, text_color))
+        row_colors.append((index, text_color, background))
 
     return values, row_colors
 

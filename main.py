@@ -23,6 +23,6 @@ def main(PATH_JSON_CAT, PATH_JSON_MOV, PATH_CSV_REPORT):
         print(f'Existe un error al iniciar la aplicacion {e}')
         traceback.print_exc()
 
-#Inicio del Sistema
+# Inicio del Sistema
 if __name__ == "__main__":
     main(PATH_JSON_CAT, PATH_JSON_MOV, PATH_CSV_REPORT)
