@@ -1,16 +1,19 @@
 import FreeSimpleGUI as sg
 from UI.createmainwindowtype import create_main_window
-from business_logic.financemanagerclass import finance_manager
+from business_logic.financemanagerclass import FinanceManager
 from business_logic.categoryclass import Category
+from business_logic.movementclass import Movement
 from datetime import datetime
 from UI.movementtablefn import movement_table, movement_table_data
 from UI.createcategorywindowtype import create_category_window
 from UI.createaddcategorywindow import create_add_category_window
+from UI.incomeexpenseselectwindow import create_select_expense_income_window
+from UI.createaddmovementwindow import create_add_movement_window
 
 
 def principal_menu_GUI(path_json_cat, path_json_mov, path_csv_report, theme):
 
-    action = finance_manager(path_json_cat, path_json_mov,path_csv_report)
+    action = FinanceManager(path_json_cat, path_json_mov,path_csv_report)
     current_theme = theme
     main_window = create_main_window(current_theme,action) 
     windows = {
@@ -40,7 +43,12 @@ def principal_menu_GUI(path_json_cat, path_json_mov, path_csv_report, theme):
 
         # Menú Inicio
         elif event == "Principal":
-            print("Mostrar pantalla principal")
+            window.close()
+            del windows["main"]
+            windows["main"] = create_main_window(
+                    current_theme,
+                    action
+                    )            
         elif event == "Salir":
             break
         
@@ -57,11 +65,6 @@ def principal_menu_GUI(path_json_cat, path_json_mov, path_csv_report, theme):
             if "categories" not in windows:
                 windows["categories"] = create_category_window(current_theme,action)
 
-        # elif window == main_window and event =="Categorías":
-        #     if categories_window is None:
-        #         categories_window = create_category_window(current_theme,action)
-        #         windows.append(categories_window)
-        
         # Cerrar Categorías // Asegura que el evento corresponda a la ventana de Categorías
         #========================================================#
             # Se reemplza el esta validando por una variable, 
@@ -72,20 +75,13 @@ def principal_menu_GUI(path_json_cat, path_json_mov, path_csv_report, theme):
             window.close()
             del windows["categories"]
         
-        # elif event == "-CLOSE-CATEGORY-":
-        #     window.close()
-        #     categories_window = None
-        #     if window in windows:
-        #         windows.remove(window)
-        
-        
         # Guardar categoría
-        #========================================================#
+        # ======================================================================================
         # Se crea una ventana con la cual se puedea agregar una nueva categoria
         # se debe validar que no esta vacia alguna d ela informacion
         # validar que ventana tiene el evento antes de cerrarla
-        #========================================================#
-        elif window == windows["categories"] and event == "Ingresar Categoria":
+        # ======================================================================================
+        elif "categories" in windows and window == windows["categories"] and event == "-ADD-CATEGORY-":
             if "addcategory" not in windows:
                 windows["addcategory"] = create_add_category_window(current_theme)
         
@@ -93,7 +89,7 @@ def principal_menu_GUI(path_json_cat, path_json_mov, path_csv_report, theme):
                 window.close()
                 del windows["addcategory"]
 
-        elif window == windows["addcategory"] and event == "-PICK-ADD-CATEGORY-":
+        elif "addcategory" in windows and window == windows["addcategory"] and event == "-PICK-ADD-CATEGORY-":
             try:
                 name = values["-CATEGORY-NAME-"]
                 color = values["-CATEGORY-COLOR-"]
@@ -101,8 +97,6 @@ def principal_menu_GUI(path_json_cat, path_json_mov, path_csv_report, theme):
                     sg.popup_error("Debe ingresar un nombre de categoría")
                 elif not color.strip():
                     sg.popup_error("Debe ingresar un color para la categoría")
-                # print("Nombre:", name)
-                # print("Color:", color)
                 category = Category(name, color)
                 action.add_category(category)
                 sg.popup("Categoría agregada correctamente")
@@ -116,47 +110,122 @@ def principal_menu_GUI(path_json_cat, path_json_mov, path_csv_report, theme):
                 )
             except Exception as e:
                 sg.popup_error(str(e))
-
-
-
-
-        # elif event == "-SAVE-CATEGORY-":
-        #     name = values["-CATEGORY-NAME-"]
-        #     color = values["-CATEGORY-COLOR-"]
-        #     print("Nombre:", name)
-        #     print("Color:", color)
-
-        # -------------------------------------------------------MOvimientos--------------------------------------------------#
-        elif event == "Movimientos":
-            print("Abrir gestión de movimientos")
-
-        # ------------Reportes-------------------------#
-        elif event == "Consultar reportes":
-            print("Consultar reportes")
-        elif event == "Exportar CSV":
-            print(f"Archivo de reporte: {path_csv_report}")
         
+        #=====================================================================================================================#
+        # -------------------------------------------------------Movimientos--------------------------------------------------#
+        # ABRIR VENTANA PARA AGREGAR MOVIMIENTOS
+        #=====================================================================================================================#
+        elif window == windows["main"] and event == "Movimientos":
+            if "select_movements" not in windows:
+                windows["select_movements"] = create_select_expense_income_window(current_theme)
+                # windows["movements"] = create_add_movement_window(current_theme,action)
+                # window["-MOVEMENT-DATE-"].update(value = "")
+        
+        
+        elif "select_movements" in windows and window == windows["select_movements"] and event == "-PICK-EXPENSE-":
+                if "movements" not in windows:
+                    windows["movements"] = create_add_movement_window(current_theme,action)
+                    movememnt_type = "gasto"
+                    print(movememnt_type)
+
+
+        elif "select_movements" in windows and window == windows["select_movements"] and event == "-PICK-INCOME-":
+                if "movements" not in windows:
+                    windows["movements"] = create_add_movement_window(current_theme,action)
+                    movememnt_type = "ingreso"
+                    print(movememnt_type)
+        
+        elif "movements" in windows and window == windows["movements"] and event == "-PICK-MOVEMENT-DATE-":
+                selected_date = sg.popup_get_date(
+                title="Seleccionar fecha del movimiento",
+                close_when_chosen=True
+                )
+                if selected_date:
+                    month, day, year = selected_date
+                    window["-MOVEMENT-DATE-"].update(
+                    f"{day:02d}/{month:02d}/{year}"
+                    )
+        elif "movements" in windows and window == windows["movements"] and event == "-PICK-CATEGORY-MOVEMENT-":
+                selected_name = values["-PICK-CATEGORY-MOVEMENT-"]
+                selected_category = next(
+                (
+                    category
+                    for category in action.categories
+                    if category.name == selected_name
+                ),
+                None
+                )
+                if selected_category:
+                    if not selected_category.name.strip():
+                        sg.popup_error("Debe elegir una categoria para el movimiento")
+
+        elif "movements" in windows and window == windows["movements"] and event == "-PICK-ADD-MOVEMENT-":
+            try:
+                movement_date = values["-MOVEMENT-DATE-"]
+                movement_description = values["-DESCRIPTION-MOVEMENT-"]
+                movement_amount = values["-AMOUNT-MOVEMENT-"]
+                movement_category = selected_category
+                if not movement_date.strip():
+                    sg.popup_error("Debe ingresar la fecha del movimeinto")
+                elif not movement_description.strip():
+                    sg.popup_error("Debe ingresar una descripcion para el movimiento")
+                elif not movement_amount.strip():
+                    sg.popup_error("Debe ingresar un monto para el movimiento")
+                elif not movement_category.name.strip():
+                    sg.popup_error("Debe elegir una categoria para el movimiento")
+                elif not movememnt_type.strip():
+                    sg.popup_error("Debe elegir un tipo de movimiento")
+                movement= Movement(movement_date,movement_description,movement_amount,movement_category,movememnt_type)
+                action.add_movement(movement)
+                sg.popup("Movimiento agregado correctamente")
+                windows["movements"].close()
+                del windows["movements"]
+                windows["select_movements"].close()
+                del windows["select_movements"]
+                windows["main"].close()
+                windows["main"] = create_main_window(
+                                current_theme,
+                                action
+                            )            
+            except Exception as e:
+                sg.popup_error(str(e))
+
+        elif ("select_movements" in windows and window == windows["select_movements"] and event == "-CLOSE-EXPENSE_INCOME-"):
+                            window.close()
+                            del windows["select_movements"]
+
+        elif ("movements" in windows and window == windows["movements"] and event == "-CLOSE-MOVEMENT-"):
+                    window.close()
+                    del windows["movements"]
+        #================================================================
+        # --------------------------Reportes-------------------------#
+        #================================================================
+
+        elif window == windows["main"] and event == "Exportar Reporte a CSV":
+            msj = action.export_movement_csv_file()
+            sg.popup(f'Se exporta reporte a formato csv. Ruta {msj}')
+        
+        #================================================================
         # ------------Configuracion del tema-------------------------#
+        #================================================================
         # Menú Configuración
         elif event == "Tema claro":
             current_theme = "LightBlue1"
             window.close()
+            del windows["main"]
             windows["main"] = create_main_window(
                 current_theme,
                 action
-            )
-            # window = create_main_window(current_theme,action)  
+            ) 
 
         elif event == "Tema oscuro":
             current_theme = "DarkGrey2"
             window.close()
+            del windows["main"]
             windows["main"] = create_main_window(
             current_theme,
             action
             )
-            # window = create_main_window(current_theme,action)         
-        
-        # Codigo para evaluar los diferentes eventos en la ventana
 
         # Menu para elegir si la tabla de movimientos se debe filtrar o no 
         elif event == "-ENABLE-FILTER-":
@@ -266,10 +335,6 @@ def principal_menu_GUI(path_json_cat, path_json_mov, path_csv_report, theme):
                 sg.popup_error(
                     "Selecciona una fecha de inicio y una fecha final válidas."
                 )
-
-
-        elif event == "Exportar Reporte":
-                    print(f"Archivo de reporte: {path_csv_report}")
     # window.close()
     #====================================================================#
     # Esto garantiza que se cierren todas las ventanas registradas al salir

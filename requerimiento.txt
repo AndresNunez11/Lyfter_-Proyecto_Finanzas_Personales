@@ -13,15 +13,15 @@ Separación de lógica y presentación✅
 ***************Requisitos técnicos
 La aplicación debe:
 Mostrar una tabla de movimientos (gastos e ingresos). ✅
-Incluir un botón para agregar una categoría:
+Incluir un botón para agregar una categoría:✅
 Al presionarlo, debe abrir una nueva ventana que permita ingresar una categoría (ej: 
-Comida, Transporte, Entretenimiento...).
-Incluir un botón para agregar un gasto:
-Al presionarlo, debe abrir una nueva ventana que permita ingresar un título, 
-monto y categoría del gasto.
-Incluir un botón para agregar un ingreso:
-Al presionarlo, debe abrir una nueva ventana que permita ingresar un título, monto y categoría del ingreso.
-Mostrar un mensaje de error si se intenta agregar un ingreso/gasto sin categorías disponibles.
+Comida, Transporte, Entretenimiento...).✅
+Incluir un botón para agregar un gasto:✅
+Al presionarlo, debe abrir una nueva ventana que permita ingresar un título, ✅
+monto y categoría del gasto.✅
+Incluir un botón para agregar un ingreso:✅
+Al presionarlo, debe abrir una nueva ventana que permita ingresar un título, monto y categoría del ingreso.✅
+Mostrar un mensaje de error si se intenta agregar un ingreso/gasto sin categorías disponibles.✅
 
 ***************Persistencia de datos
 Al cerrar o hacer un cambio, el programa debe guardar automáticamente los datos en archivos.
@@ -32,7 +32,7 @@ Use clases para representar las entidades principales del sistema (Movimiento, C
 Separe la lógica del programa en funciones pequeñas y reutilizables.✅
 Organice su código en módulos (interfaces.py, logica.py, persistencia.py, etc.).✅
 Use identificadores claros que indiquen el propósito de cada variable, función o clase.✅
-Aplique validaciones básicas en los formularios.
+Aplique validaciones básicas en los formularios.✅
 Implemente pruebas unitarias simples.✅
 
 ***************Pruebas unitarias
@@ -84,9 +84,9 @@ Filtrando desde ✅
 01/07/2025 hasta 10/07/2025 ✅
 Movimientos:- 02/07/2025 | Salario | ₡1000- 03/07/2025 | Comida | ₡-20 ✅
 
-Permitir al usuario definir la fecha del ingreso o gasto (en lugar de solo usar la actual)
-Al agregar un nuevo gasto o ingreso, incluya un campo adicional para ingresar la fecha (por defecto puede ser hoy)
-Valide que la fecha sea válida y que no esté en el futuro
+Permitir al usuario definir la fecha del ingreso o gasto (en lugar de solo usar la actual)✅
+Al agregar un nuevo gasto o ingreso, incluya un campo adicional para ingresar la fecha (por defecto puede ser hoy)✅
+Valide que la fecha sea válida y que no esté en el futuro✅
 
 Ejemplo:
 Entrada:
@@ -94,16 +94,16 @@ Entrada:
 Salida correcta:
 Nuevo ingreso agregado:
 Fecha: 20/07/2025 | Título: Venta libro | Monto: ₡50 | Tipo: Ingreso
-Salida si la fecha es incorrecta:
-Error: Formato de fecha inválido (use dd/mm/yyyy)
-Salida si la fecha es futura:
-Error: La fecha no puede ser en el futuro
+Salida si la fecha es incorrecta:✅
+Error: Formato de fecha inválido (use dd/mm/yyyy)✅
+Salida si la fecha es futura:✅
+Error: La fecha no puede ser en el futuro✅
 
-Generar un archivo .csv con todos los movimientos y totales
-Añada un botón “Exportar a CSV” en la ventana principal
-Al presionarlo, cree un archivo con:
-LISTO -- Encabezados: Fecha, Título, Monto, Categoría, Tipo 
-Suma total de ingresos, gastos, y balance neto al final
+Generar un archivo .csv con todos los movimientos y totales✅
+Añada un botón “Exportar a CSV” en la ventana principal✅
+Al presionarlo, cree un archivo con:✅
+LISTO -- Encabezados: Fecha, Título, Monto, Categoría, Tipo ✅
+Suma total de ingresos, gastos, y balance neto al final✅
 Ejemplo:
 
 Entrada:
@@ -119,7 +119,7 @@ Gastos: ₡100
 Balance Neto: ₡1100
 
 Asignar un color personalizado a cada categoría ✅
-Al crear o editar una categoría, permita seleccionar un color con sg.ColorChooserButton 
+Al crear o editar una categoría, permita seleccionar un color con sg.ColorChooserButton ✅
 Al mostrar los movimientos en la tabla, use el color asociado a su categoría ✅
 Asegúrese de guardar esta información junto con las categorías ✅
 Ejemplo:
@@ -135,24 +135,24 @@ A nivel de base de datos:
 /*----------------------------------------Primera Entrega----------------------------------------------------------*/
 28-09-2026 Se entrega un avance a la plataforma antes de iniciar con la construccion del front end.
 
-1- Todavía faltan los requisitos centrales de la interfaz: 
-la tabla de movimientos en la ventana principal, 
-los botones para agregar categoría, 
-gasto e ingreso que abren su propia ventana, 
-y el mensaje de error cuando no hay categorías disponibles. 
-Por ahora los botones Categorías, Movimientos y Exportar Reporte solo hacen print. 
-Revisa el elemento sg.Table y cómo abrir una segunda ventana con su propio event loop para los formularios.
+1- Todavía faltan los requisitos centrales de la interfaz: ✅
+la tabla de movimientos en la ventana principal, ✅
+los botones para agregar categoría, ✅
+gasto e ingreso que abren su propia ventana, ✅
+y el mensaje de error cuando no hay categorías disponibles. ✅
+Por ahora los botones Categorías, Movimientos y Exportar Reporte solo hacen print. ✅
+Revisa el elemento sg.Table y cómo abrir una segunda ventana con su propio event loop para los formularios.✅
 
-2- La interfaz todavía no está conectada con la lógica de negocio. principal_menu_GUI recibe las rutas de los JSON pero nunca las usa,
-y en create_financial_indicators el balance, los ingresos y los gastos están fijos en 0. 
-Verifica cómo crear una instancia de finance_manager al iniciar la app y usar las keys 
-BALANCE-, INCOME- y EXPENSES- con window[...].update() para mostrar los valores reales.
+2- La interfaz todavía no está conectada con la lógica de negocio. principal_menu_GUI recibe las rutas de los JSON pero nunca las usa,✅
+y en create_financial_indicators el balance, los ingresos y los gastos están fijos en 0. ✅
+Verifica cómo crear una instancia de finance_manager al iniciar la app y usar las keys ✅
+BALANCE-, INCOME- y EXPENSES- con window[...].update() para mostrar los valores reales.✅
 
-✅ 3- En principal_menu_GUI hay lógica repetida: el cambio de tema está escrito cuatro veces 
-(dos desde el menú y dos desde los botones), y "Salir" se evalúa dos veces, 
-así que el segundo elif event == "Salir" nunca se ejecuta. 
-Además, después de la cadena de elif hay dos if sueltos. 
-Revisa cómo agrupar eventos que hacen lo mismo y extraer el cambio de tema a una función pequeña.
+✅ 3- En principal_menu_GUI hay lógica repetida: el cambio de tema está escrito cuatro veces ✅
+(dos desde el menú y dos desde los botones), y "Salir" se evalúa dos veces, ✅
+así que el segundo elif event == "Salir" nunca se ejecuta. ✅
+Además, después de la cadena de elif hay dos if sueltos. ✅
+Revisa cómo agrupar eventos que hacen lo mismo y extraer el cambio de tema a una función pequeña.✅
 
 ✅ 4- Quedaron print de depuración en el event loop, por ejemplo print("Ventana:", window.size) y 
 print("Columna:", ...). Recuerda limpiarlos antes de entregar.
@@ -189,5 +189,59 @@ formatos, fecha y patron. Además, correcion.py ejecuta la corrección
 apenas se importa y apunta a jsonmovementsfile copy.json, 
 que no existe en el repo. 
 Si era un script de un solo uso, valora si debe quedarse en el proyecto junto con jsonmovementsfile_corregido.json.
+
+/*----------------------------------------Segunda Entrega----------------------------------------------------------*/
+
+
+✅ 1- Todavía faltan los requisitos centrales del enunciado: 
+los botones para agregar gasto e ingreso que abren su propia ventana con título, monto y categoría, 
+la ventana para ingresar una nueva categoría, y el mensaje de error cuando no hay categorías disponibles. 
+
+✅ 2 - La ventana de Categorías ya abre, pero los botones "Ingresar Categoria" y "Mantenimiento a Categorias" 
+no tienen ningún evento asociado, y el botón "Movimientos" solo hace print. 
+
+✅ 3- Revisa qué datos necesita cada formulario y aprovecha sg.ColorChooserButton para el color de la categoría.
+En principal_menu_GUI quedaron ramas que nunca se ejecutan: "-SAVE-CATEGORY-" lee values["-CATEGORY-NAME-"] y "-CLOSE-CATEGORY-" cierra la ventana, pero ninguna de esas keys existe en create_category_window. Además, el segundo elif event == "Salir" sigue sin ejecutarse porque el primer if ya atrapa ese evento. Verifica que cada evento que manejas en el loop corresponda a un elemento real de alguna ventana.
+
+✅ 4- Hay un bug con el cambio de tema. Cuando presionas "Tema claro" o "Tema oscuro", se cierra la ventana y se crea una nueva, 
+pero windows["main"] sigue apuntando a la ventana vieja. 
+Después de cambiar el tema, prueba abrir Categorías o cerrar la ventana principal con la X y revisa qué pasa. 
+También prueba cambiar el tema desde el menú de la ventana de Categorías y observa qué ventana se abre. 
+
+✅ 5- Revisa cómo mantener el diccionario windows actualizado, y de paso cómo unir las dos ramas de tema 
+en una sola función que reciba el nombre del tema.
+
+✅ 6-Las pruebas unitarias ya no corren. test_categoryclassfunction.py importa CategoryExistsError, 
+que no existe en financemanagerclass.py, y todas las pruebas crean finance_manager() sin argumentos 
+y llaman add_category(category, path) y add_movement(movement, path) con la firma vieja. 
+Corre python -m pytest -v qa_test/ y revisa cómo pasarle al constructor rutas dentro de tmp_path 
+para que las pruebas sigan sin tocar tus archivos reales.
+
+✅ 7- El filtro por fechas se resuelve directamente dentro del event loop con una list comprehension, 
+mientras que finance_manager.filter_movements_by_date_range existe pero nadie lo usa, 
+y además espera fechas en formato %Y-%m-%d y vuelve a convertir movement.date a string para parsearlo de nuevo. 
+Revisa cómo dejar el filtrado en la lógica de negocio y que la interfaz solo llame al método, 
+así también podrías escribirle una prueba unitaria.
+
+✅ 8- Las clases finance_manager, movement_validation, category_validation y categoryexistserror 
+siguen en snake_case o en minúscula, aunque en requerimiento.txt quedó marcado como resuelto. 
+Revisa la convención de PEP 8 para nombres de clases y aprovecha para alinear el nombre de la excepción 
+con el que esperan tus pruebas.
+
+✅ 9 - Quedan algunos print de depuración: print("Mostrar pantalla principal"), 
+los de Nombre y Color en el loop, print(f'Categorias: ...') en add_category, print(f'Movimientos ...') 
+en add_movement y print('Movimeinto agregado') en movement_save_json_file. 
+También hay bloques de código comentado con la versión anterior del manejo de ventanas en principalmenufn.py. 
+Recuerda limpiarlos antes de la entrega final.
+
+10 -Al leer los movimientos, movement_read_json_file crea un objeto Category nuevo por cada movimiento, 
+independiente de los que están en finance_manager.categories. Cuando implementes la edición de categorías, 
+piensa qué va a pasar con el color de los movimientos que ya existen. 
+Revisa si te conviene que cada movimiento apunte a la categoría que ya está cargada en memoria.
+Todavía hay identificadores en español, por ejemplo patron en category_validation.validate_color_format. 
+
+11- Además, business_logic/menu.py quedó con la firma vieja de los métodos (Global_balance, finance_manager() sin rutas, 
+add_category con path) y source/jsonmovementsfile_corregido.json sigue en el repo. 
+Valora si esos archivos todavía tienen sentido en el proyecto ahora que la app es gráfica.
 
 

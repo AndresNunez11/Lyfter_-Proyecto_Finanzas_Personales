@@ -1,9 +1,9 @@
 
 import FreeSimpleGUI as sg
-from business_logic.financemanagerclass import finance_manager
+from business_logic.financemanagerclass import FinanceManager
 
 
-def create_financial_indicators(action:finance_manager):
+def create_financial_indicators(action:FinanceManager):
 
     actions = action
     balance =  f"₡{float(actions.global_balance()):,.2f}"

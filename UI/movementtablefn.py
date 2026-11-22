@@ -1,6 +1,6 @@
 
 import FreeSimpleGUI as sg
-from business_logic.financemanagerclass import finance_manager
+from business_logic.financemanagerclass import FinanceManager
 
 
 def movement_table_data(movements):
@@ -25,7 +25,7 @@ def movement_table_data(movements):
     return values, row_colors
 
 
-def movement_table(action: finance_manager):
+def movement_table(action: FinanceManager):
     values, row_colors = movement_table_data(action.movements)
 
     return sg.Table(

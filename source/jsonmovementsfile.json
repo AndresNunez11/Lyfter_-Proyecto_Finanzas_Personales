@@ -38,5 +38,75 @@
             "color": "#800080"
         },
         "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-11-16",
+        "description": "Pago de servicios publicos",
+        "amount": "15000",
+        "category": {
+            "name": "Telefono",
+            "color": "#004000"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-11-12",
+        "description": "Pago de comestibles",
+        "amount": "145000",
+        "category": {
+            "name": "Comestible",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-11-19",
+        "description": "Pago de salida con la familia",
+        "amount": "25000",
+        "category": {
+            "name": "Salida Semanal",
+            "color": "#FFA500"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-11-01",
+        "description": "Salario Noviembre",
+        "amount": "650000",
+        "category": {
+            "name": "Salario",
+            "color": "#00FF00"
+        },
+        "type": "Ingreso"
+    },
+    {
+        "movement_date": "2026-11-04",
+        "description": "prueba5",
+        "amount": "10000",
+        "category": {
+            "name": "Servicios Publicos",
+            "color": "#A52A2A"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-11-14",
+        "description": "Prueba de gastos ",
+        "amount": "25000",
+        "category": {
+            "name": "pruebaUno",
+            "color": "#0080c0"
+        },
+        "type": "Gasto"
+    },
+    {
+        "movement_date": "2026-11-12",
+        "description": "Salario 2da noviembre",
+        "amount": "650000",
+        "category": {
+            "name": "Salario",
+            "color": "#00FF00"
+        },
+        "type": "Ingreso"
     }
 ]

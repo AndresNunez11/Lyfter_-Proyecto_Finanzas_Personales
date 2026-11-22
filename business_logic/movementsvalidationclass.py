@@ -16,7 +16,7 @@ class FormatError(Exception):
         super().__init__(f'\n La fecha no puede ser posterior al dia de hoy')
 
 
-class movement_validation:
+class Movement_Validation:
 
     #Excepcion para validar el nombre de la categoria no tenga un numero
     @staticmethod

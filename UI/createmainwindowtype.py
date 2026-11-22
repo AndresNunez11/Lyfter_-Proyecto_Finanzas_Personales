@@ -2,11 +2,11 @@ import FreeSimpleGUI as sg
 from UI.financialindicatorsfn import create_financial_indicators
 from UI.movementtablefn import movement_table
 from UI.filtermovementfn import filter_table
-from business_logic.financemanagerclass import finance_manager
+from business_logic.financemanagerclass import FinanceManager
 from UI.footerfn import create_footer
 
 #Funcion para la pantalla principal
-def create_main_window(theme,action:finance_manager):
+def create_main_window(theme,action:FinanceManager):
 
     sg.theme(theme)
     menu_definition = [
@@ -45,7 +45,7 @@ def create_main_window(theme,action:finance_manager):
                         sg.Push(background_color="#475569"),
                         sg.Button("Categorías", size=(15, 1)),
                         sg.Button("Movimientos", size=(15, 1)),
-                        sg.Button("Exportar Reporte", size=(15, 1)),
+                        sg.Button("Exportar Reporte a CSV", size=(18, 1)),
                         sg.Push(background_color="#475569")
                         ],
                         ],

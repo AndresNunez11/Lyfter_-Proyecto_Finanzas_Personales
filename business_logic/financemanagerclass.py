@@ -3,13 +3,14 @@ from business_logic.categoryclass import Category
 from business_logic.movementclass import Movement
 from business_logic.categoryjsonfile import category_read_json_file, category_save_json_file
 from business_logic.movementjsonfile import movement_read_json_file, movement_save_json_file
+from business_logic.movementcsvfile import movement_save_csv_file
 
 
-class categoryexistserror(Exception):
+class CategoryExistsError(Exception):
     def __init__(self):
         super().__init__("Ya existe una categoría con ese nombre")
 
-class finance_manager:
+class FinanceManager:
     def __init__(self,path_categories, path_movements, path_csv):
         self.path_categories = path_categories
         self.path_movements = path_movements
@@ -23,7 +24,7 @@ class finance_manager:
         # self.categories = category_read_json_file(path_json_file) #Se iguala para que entienda que es una lista de categorias
         for exist_category in self.categories:
             if exist_category.name.lower() == category.name.lower():
-                raise categoryexistserror()
+                raise CategoryExistsError()
         self.categories.append(category)
         category_save_json_file(self.categories, self.path_categories)
         # print(f'Categorias: \n{self.categories}')
@@ -31,7 +32,7 @@ class finance_manager:
 
     def add_movement(self, movement:Movement):
         # self.movements = movement_read_json_file(path_json_file)
-        print(f'Movimientos \n {self.movements}\n')
+        # print(f'Movimientos \n {self.movements}\n')
         self.movements.append(movement)
         movement_save_json_file(self.movements, self.path_movements)
         return self.movements
@@ -86,6 +87,11 @@ class finance_manager:
             if start_date <= movement_date <= end_date:
                 filtered_movements.append(movement)
         return filtered_movements
+    
+    def export_movement_csv_file(self):
+        msj = movement_save_csv_file(self.movements, self.path_csv)
+        # print(msj)
+        return msj
             
             
             

@@ -65,3 +65,14 @@ class Movement:
             "category": self.category.to_dict(),
             "type": self.type
         }
+
+    def to_csv_dict(self):
+    # """Serialización para CSV."""
+        return {
+            "Fecha_Movimiento": str(self.date),
+            "Descripcion": self.description,
+            "Monto": self.amount,
+            "Categoria": self.category.name,
+            "Color_Categoria":self.category.color,
+            "Tipo": self.type
+        }

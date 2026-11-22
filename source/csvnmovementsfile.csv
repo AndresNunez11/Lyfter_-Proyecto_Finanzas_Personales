@@ -1,0 +1,12 @@
+Fecha_Movimiento,Descripcion,Monto,Categoria,Color_Categoria,Tipo
+2026-07-12,Pago de quincena,750000,Salario,#00FF00,Ingreso
+2026-07-23,Pago de quincena,750000,Salario,#00FF00,Ingreso
+2026-07-13,Compra de supermercado,46637,Comestible,#A52A2A,Gasto
+2026-07-14,Combustible,20274,Transporte,#800080,Gasto
+2026-11-16,Pago de servicios publicos,15000,Telefono,#004000,Gasto
+2026-11-12,Pago de comestibles,145000,Comestible,#A52A2A,Gasto
+2026-11-19,Pago de salida con la familia,25000,Salida Semanal,#FFA500,Gasto
+2026-11-01,Salario Noviembre,650000,Salario,#00FF00,Ingreso
+2026-11-04,prueba5,10000,Servicios Publicos,#A52A2A,Gasto
+2026-11-14,Prueba de gastos ,25000,pruebaUno,#0080c0,Gasto
+2026-11-12,Salario 2da noviembre,650000,Salario,#00FF00,Ingreso

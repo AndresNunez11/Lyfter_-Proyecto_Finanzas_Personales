@@ -6,7 +6,7 @@ import traceback
 #Utilizar la variable global en la mayuscula cuando es inmutable -- 
 PATH_JSON_CAT = 'source/jsoncategoriesfile.json'
 PATH_JSON_MOV = 'source/jsonmovementsfile.json'
-PATH_CSV_REPORT = 'Lyfter_Gestor_Finanzas_Personales/REPORT.csv'
+PATH_CSV_REPORT = 'source/csvnmovementsfile.csv'
 CURRENT_THEME = "LightBlue1"
 
 #Funcion principal del sistema 

@@ -36,6 +36,11 @@ def create_add_category_window(theme):
                     key="-PICK-ADD-CATEGORY-",
                     visible=True
                     ),
+                sg.Button(
+                    "Cerrar",
+                    key="-CLOSE-ADD-CATEGORY-",
+                    visible=True
+                ),
                 sg.Push()
             ]         
             
@@ -46,6 +51,5 @@ def create_add_category_window(theme):
                             resizable=True, 
                             finalize=True,
                             margins=(0, 0),
-                            # background_color="#1F4E78",
                             font=("Arial", 15, "bold"))
     return window  

@@ -1,5 +1,5 @@
 import FreeSimpleGUI as sg
-from business_logic.financemanagerclass import finance_manager
+from business_logic.financemanagerclass import FinanceManager
 
 
 def category_table_data(categories):
@@ -13,8 +13,9 @@ def category_table_data(categories):
             category.name,
             category.color
         ])
-
+        # ======================================================================================
         # El color de la categoría se usa como fondo de la fila.
+        # ======================================================================================
         background = "#FFFFFF"
         text_color = category.color
 
@@ -22,24 +23,23 @@ def category_table_data(categories):
 
     return values, row_colors
 
-def categories_table(action: finance_manager):
+def categories_table(action: FinanceManager):
         values, row_colors = category_table_data(action.categories)
 
         return sg.Table(
             values=values,
             headings=[
-                "Categoria",
-                "Color",
-            ],
+                    "Categoria",
+                    "Color",
+                    ],
             key="-CATEGORIES-TABLE-",
-            size=(900,10),
-            # auto_size_columns=True,
             col_widths=[12, 12],
             justification="left",
             num_rows=10,
             expand_x=True,
             expand_y=True,
             row_colors=row_colors,
-            enable_events=True
-            )
+            enable_events=True,
+            pad=((5,5),(0,0))                
+        )
 
