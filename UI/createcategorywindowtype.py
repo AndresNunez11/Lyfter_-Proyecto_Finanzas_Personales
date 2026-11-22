@@ -37,6 +37,7 @@ def create_category_window(theme,action:FinanceManager):
                             [sg.HorizontalSeparator()],
                             [sg.Frame(
                                 "Categorias - IQ - Smart Finance",
+                                [],
                                 title_color="#F8FAFC",
                                 title_location="n",
                                 element_justification="center",

@@ -33,6 +33,7 @@ def principal_menu_GUI(path_json_cat, path_json_mov, path_csv_report, theme):
         #================================================#
         if event in (sg.WINDOW_CLOSED, "Salir"):
             if window == windows["main"]:
+                action.save_data_close_app()
                 break
             for key, open_window in list(windows.items()):
                 if open_window == window:
@@ -43,14 +44,15 @@ def principal_menu_GUI(path_json_cat, path_json_mov, path_csv_report, theme):
 
         # Menú Inicio
         elif event == "Principal":
-            window.close()
+            for window in windows.values():
+                if window is not None:
+                    window.close()
             del windows["main"]
+            action.save_data_close_app()
             windows["main"] = create_main_window(
                     current_theme,
                     action
                     )            
-        elif event == "Salir":
-            break
         
         # Menú Administración
         # ----------------------------------------------Categorias----------------------------------------------------------#
@@ -211,7 +213,10 @@ def principal_menu_GUI(path_json_cat, path_json_mov, path_csv_report, theme):
         # Menú Configuración
         elif event == "Tema claro":
             current_theme = "LightBlue1"
-            window.close()
+            for window in windows.values():
+                if window is not None:
+                    window.close()
+            action.save_data_close_app()
             del windows["main"]
             windows["main"] = create_main_window(
                 current_theme,
@@ -220,7 +225,10 @@ def principal_menu_GUI(path_json_cat, path_json_mov, path_csv_report, theme):
 
         elif event == "Tema oscuro":
             current_theme = "DarkGrey2"
-            window.close()
+            for window in windows.values():
+                if window is not None:
+                    window.close()
+            action.save_data_close_app()
             del windows["main"]
             windows["main"] = create_main_window(
             current_theme,

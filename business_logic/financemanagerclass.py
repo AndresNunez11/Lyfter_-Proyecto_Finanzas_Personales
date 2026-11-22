@@ -92,6 +92,10 @@ class FinanceManager:
         msj = movement_save_csv_file(self.movements, self.path_csv)
         # print(msj)
         return msj
+
+    def save_data_close_app(self):
+        category_save_json_file(self.categories, self.path_categories)
+        movement_save_json_file(self.movements, self.path_movements)
             
             
             

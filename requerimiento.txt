@@ -245,3 +245,13 @@ add_category con path) y source/jsonmovementsfile_corregido.json sigue en el rep
 Valora si esos archivos todavía tienen sentido en el proyecto ahora que la app es gráfica.
 
 
+/*----------------------------------------Tercera  Entrega----------------------------------------------------------*/
+✅ si activas el checkbox “Filtrar por fecha” o cambias el tema sin tener abierta la ventana de Categorías, 
+la app se cae. 
+✅ Revisa la condición del evento “Ingresar Categoria” y compárala con la de “-CLOSE-CATEGORY-”, 
+ahí está la pista.
+✅ Después de eso, lo que sigue son los formularios de gasto e ingreso. 
+✅ Y cuando puedas, corre las pruebas con python -m pytest -v qa_test/, porque ahorita no están corriendo.
+
+
+
