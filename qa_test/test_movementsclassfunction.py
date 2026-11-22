@@ -1,22 +1,28 @@
 from business_logic.movementclass import Movement
-from business_logic.movementsvalidationclass import movement_validation, EmptyTypeError, FormatError, NameTypeError
-from business_logic.financemanagerclass import finance_manager
+from business_logic.movementsvalidationclass import EmptyTypeError, FormatError
+from business_logic.financemanagerclass import FinanceManager
 from business_logic.categoryclass import Category
 from datetime import date
 import pytest
 
 def test_add_correct_movement(tmp_path):
     #Arrange
-    action = finance_manager()
+    path_categories = tmp_path / "categories.json"
+    path_movements = tmp_path / "movements.json"
+    path_csv = tmp_path / "report.csv"
+    action = FinanceManager(
+        path_categories,
+        path_movements,
+        path_csv
+    )
     m_date =  '28-09-2026'
     description = 'Pago de salario'
     amount = 1500000.0
     category = Category('Salario','#000000')
     m_type = 'Ingreso'
-    path_json_file =  tmp_path / "test_movements.json"
     new_movement = Movement(m_date, description, amount, category, m_type)
     #Act
-    Result = action.add_movement(new_movement, path_json_file) 
+    Result = action.add_movement(new_movement) 
     #Assert
     assert len(Result) == 1
     assert Result[0].date ==  date(2026, 9, 28)

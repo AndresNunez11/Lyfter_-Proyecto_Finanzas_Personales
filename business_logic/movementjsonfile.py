@@ -45,7 +45,6 @@ def movement_save_json_file(movement_list, path_json_file):
         movements = [movement.to_dict() for movement in movement_list]
         with open(path_json_file, "w", encoding="utf-8" ) as file:
             json.dump(movements, file, indent=4, ensure_ascii=False)
-        print('Movimeinto agregado')
     except Exception as e:
         print(f'Error al guardar los movimientos {e}')
 

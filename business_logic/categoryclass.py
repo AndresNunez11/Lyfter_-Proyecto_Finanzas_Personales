@@ -1,4 +1,4 @@
-from business_logic.categoryvalidationclass import category_validation
+from business_logic.categoryvalidationclass import CategoryValidation
 
 class Category:
 
@@ -14,7 +14,7 @@ class Category:
 
     @name.setter
     def name(self, name):
-        self._name = category_validation.validate_empty_name(category_validation.validate_name(name))
+        self._name = CategoryValidation.validate_empty_name(CategoryValidation.validate_name(name))
 
 # Propiedad color. El setter ejecuta la validación del formato hexadecimal. 
     @property
@@ -23,7 +23,7 @@ class Category:
 
     @color.setter
     def color(self, color):
-        self._color = category_validation.validate_color_format(color)
+        self._color = CategoryValidation.validate_color_format(color)
 
 
 

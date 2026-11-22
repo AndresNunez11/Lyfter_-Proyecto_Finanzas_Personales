@@ -1,4 +1,4 @@
-from business_logic.financemanagerclass import finance_manager
+from business_logic.financemanagerclass import FinanceManager
 from business_logic.categoryclass import Category
 from business_logic.movementclass import Movement
 
@@ -12,7 +12,7 @@ MENU_LIST= ["0- Salir",
 # Funcion principal para desplegar el menu
 def menu(path_json_cat, path_json_mov, path_csv_report):
     try: 
-        actions = finance_manager()
+        actions = FinanceManager()
         #new_std_list = actions.read_json_file(path)
         while True:
             try:

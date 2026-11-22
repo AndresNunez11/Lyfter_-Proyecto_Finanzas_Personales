@@ -34,6 +34,29 @@
     {
         "name": "Comestible",
         "color": "#A52A2A"
+    },
+    {
+        "name": "Telefono",
+        "color": "#004000"
+    },
+    {
+        "name": "Internet",
+        "color": "#8080ff"
+    },
+    {
+        "name": "Gastos Personales",
+        "color": "#ff0000"
+    },
+    {
+        "name": "Personales",
+        "color": "#ff0000"
+    },
+    {
+        "name": "pruebaUno",
+        "color": "#0080c0"
+    },
+    {
+        "name": "pruebaDos",
+        "color": "#ff80ff"
     }
 ]
-

@@ -18,7 +18,7 @@ class FormatTypeError(Exception):
 
 
 
-class category_validation:
+class CategoryValidation:
 
     #Excepcion para validar el nombre de la categoria no tenga un numero
     @staticmethod
